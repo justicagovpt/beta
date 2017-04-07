@@ -1,0 +1,14 @@
+.justica-menu {
+    .go_to_footer {
+        position: absolute;
+        left: -1000000px;
+        z-index: 999;
+        width: 50px;
+        height: 50px;
+        display: block;
+        background-color: gray;
+        &:hover {
+            background-color: black;
+        }
+    }
+}

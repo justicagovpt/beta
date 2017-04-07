@@ -1,0 +1,44 @@
+/*FONTS n2*/
+
+// para o formulário base usar caminho a subir um nível (   url( '../   )
+@font-face {
+    font-family: 'open-sanslight';
+    src: url(#{$fonts-root-path}opensans-light-webfont.woff2) format('woff2'), url(#{$fonts-root-path}opensans-light-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open-regular';
+    src: url(#{$fonts-root-path}opensans-regular-webfont.woff2) format('woff2'), url(#{$fonts-root-path}opensans-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open-italic';
+    src: url(#{$fonts-root-path}opensans-italic-webfont.woff2) format('woff2'), url(#{$fonts-root-path}opensans-italic-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open-semibold';
+    src: url(#{$fonts-root-path}opensans-semibold-webfont.woff2) format('woff2'), url(#{$fonts-root-path}opensans-semibold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open-bold';
+    src: url(#{$fonts-root-path}opensans-bold-webfont.woff2) format('woff2'), url(#{$fonts-root-path}opensans-bold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open-extrabold';
+    src: url(#{$fonts-root-path}opensans-extrabold-webfont.woff2) format('woff2'), url(#{$fonts-root-path}opensans-extrabold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

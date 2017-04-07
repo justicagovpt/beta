@@ -1,0 +1,12 @@
+//---------------------------  Generic imports 
+@import 'core/reset';
+@import 'core/mixins'; 
+@import 'core/config';
+@import 'core/skeleton';
+@import 'core/components';
+@import 'core/fonts';
+
+//---------------------------  Module imports 
+//Fomulario
+@import '../_modules/global_form/scss/_module';
+

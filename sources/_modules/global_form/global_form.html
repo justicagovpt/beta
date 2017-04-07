@@ -1,0 +1,206 @@
+<link rel="stylesheet" href="../css/formularioBase.css">
+<!-- <link rel="stylesheet" href="../css/docs.css"> -->
+
+<section class="global_form" data-control="global_form">
+
+    <div class="container">
+        <div class="container inner">
+
+            <!--STEPS NAVIGATOR-->
+            <div class="row">
+                <div class="steps col-sm-12 separator">
+                    <span class="step1 active" href="#">Passo 1</span>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <span class="step2" href="#">Passo 2</span>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <span class="step3" href="#">Passo 3</span>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <span class="step4" href="#">Passo 4</span>
+                    <i class="fa fa-chevron-right completed" aria-hidden="true"></i>
+                    <span class="step5" href="#">Passo 5</span>
+                    <i class="fa fa-chevron-right completed" aria-hidden="true"></i>
+                    <span class="step6" href="#">Passo 6</span>
+                </div>
+            </div>
+
+            <!--CONTENT EXAMPLES-->
+            <div class="row">
+                <div class="col-sm-12 separator">
+
+                    <!--STEP-->
+                    <div class="step">
+                        <p>Paragrafos</p>
+                        <span class="line"></span>
+                        <h1>Título H1</h1>
+                        <span class="line"></span>
+                        <h2>Título H2</h2>
+                        <span class="line"></span>
+                        <h5>
+                            Título com ajuda
+                            <span class="ajuda" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                <i class="fa fa-question-circle" aria-hidden="true"></i>
+                            </span>
+                        </h5>
+                        <span class="line"></span>
+                        <h3> Título de cada segmento H3</h3>
+                        <h6>Texto na mesma linha que o titulo do segmento</h6>
+                        <span class="line"></span>
+                        <div class="form_container horizontal row">
+                            <div class="form_item col-md-4">
+                                <label>Número fiscal</label>
+                                <input type="number" name="número fiscal" placeholder="ex:502 236 420">
+                            </div>
+                            <div class="form_item col-md-4">
+                                <label>Nome</label>
+                                <input type="text" name="ex: João António" placeholder="ex:502 236 420">
+                            </div>
+                            <div class="form_item col-md-4">
+                                <label>Select com opções</label>
+                                <select type="text" name="" placeholder="...">
+                                    <option>...</option>
+                                    <option>option1</option>
+                                    <option>option2</option>
+                                    <option>option3</option>
+                                    <option>option4</option>
+                                </select>
+                            </div>
+                            <div class="form_item col-md-4">
+                                <label>Firma ou Denominação</label>
+                                <input type="text" name="Firma ou Denominação" value="alhos e bugalhos .lda" disabled>
+                            </div>
+                            <div class="form_item col-md-4">
+                                <label>
+                                    Tooltip
+                                    <span class="ajuda" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                    </span>
+
+                                </label>
+                                <input type="text" name="Código Lei" value="Tooltip" disabled>
+                            </div>
+                            <div class="form_item col-md-4">
+                                <label>
+                                    Campo com erro
+                                    <span class="ajuda" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                    </span>
+                                </label>
+                                <input class="erro" type="email" name="Endereço eletrónico institucional" placeholder="ex: exemplo@exemplo.pt">
+                                <label class="erro">campo nao devidademte preenchido</label>
+                            </div>
+                            <div class="form_item col-md-4">
+                                <label>Campo com data em HTML5</label>
+                                <input type="date" name="bicc" id="bicc">
+                            </div>
+                            <div class="form_item col-md-4">
+                                <input type="checkbox" id="checkbox" name="Firma ou Denominação">
+                                <label for="checkbox" class="text_checkbox">Checkbox</label>
+                            </div>
+
+                            <div class="form_item col-md-4">
+                                <div class="col-md-6">
+                                    <input type="radio" name="check_declarantes" id="check_declarantes1" value="sim">
+                                    <label class="radio_text" for="check_declarantes1">Radio</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="radio" name="check_declarantes" id="check_declarantes2" value="nao" checked>
+                                    <label class="radio_text" for="check_declarantes2">Buttons</label>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="line"></span>
+                        <div class="form_container horizontal row blank">
+                            <div class="form_item horizontal termos col-md-12">
+
+                                <div class="text_check">
+                                    <label>Campo com fundo branco (class .blank)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="line"></span>
+                        <div class="form_container horizontal row">
+                            <div class="form_item horizontal termos col-md-12">
+                                <div class="text_check">
+                                    <label class="checkbox">Campo genérico de final de formulário</label>
+                                    <em>caso seja necessário</em>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="line"></span>
+                        <div class="form_container horizontal row">
+                            <div class="form_item horizontal termos col-md-12">
+                                <div class="form-block add-block" id="form_add">
+                                    <span class="add" title="Add">
+                                        Adicionar Beneficiário
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <span class="line"></span>
+                    <h3>Final do formulário texto + botões</h3>
+                    <div class="form_container horizontal row padding">
+                        <p>O comprovativo foi enviado por email à Entidade, ao Beneficiário Efetivo e ao Declarante.</p>
+                        <p>Caso pretenda uma cópia, por favor imprima ou descarregue o PDF para ficar com o comprovativo</p>
+                        <div class="btns_final">
+                            <span class="add" title="Add">
+                                Imprimir documento
+                                <i class="fa fa-print" aria-hidden="true"></i>
+                            </span>
+                            <span class="add pdf" title="Add">
+                                Descarregar PDF
+                                <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                   
+                    
+                        <div class="col-sm-12 bottom separator">
+                            <div class="links">
+                                <h2>Informação útil</h2>
+                                <a href="#" class="nav-link">
+                                    <span>O Beneficiário efetivo</span>
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <span>O que é o beneficiário efetivo</span>
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <span>Como registar o beneficiário efetivo da empresa</span>
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <span>Onde registar o beneficiário efetivo da empresa</span>
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <span>Qual o preço para registar o beneficiário efetivo da empresa</span>
+                                </a>
+                                <a href="#" class="nav-link other">
+                                    <span>outras questões</span>
+                                </a>
+                            </div>
+                        </div>
+                  
+
+                    <!--Butão prev-->
+                    <button class="buttonExecutaServico prevstep" href="#">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <span>Voltar</span>
+                    </button>
+
+                    <!--Butão next-->
+                    <button class="buttonExecutaServico nextstep" href="#">
+                        <span>Continuar</span>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="col-sm-12 bottom separator">
+                        <em>Actualizado a 27 de Novembro de 2016</em>
+                        <a class="small-link">Precisa de Ajuda para encontrer o que procura?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,238 @@
+//--------------------- Body global styles
+body {
+    font-family: $open-regular;
+    font-size: $size16;
+    .container:not(.navbar) {
+        padding-left: 25px;
+        padding-right: 25px;
+        @include mobile {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+//--------------------- 100%with for mobile containers
+.container {
+    @include media-smaller-than(991px) {
+        width: 100%;
+    }
+}
+
+//--------------------- margin top of footer
+
+
+//--------------------- PULL CONTAINERS UP
+.pull_upper_module {
+    margin-top: -80px !important;
+    position: relative;
+    @include tablet {
+        margin-top: -80px !important;
+        //margin: 0 15px;
+        //padding: 15px;
+    }
+    @include mobile {
+        margin-top: -40px !important;
+    }
+    &.bread {
+        background-color: $white;
+        margin-bottom: 0;
+    }
+}
+
+//--------------------- PULL CONTAINERS UP IN ORGANISMOS
+.pull_upper_module_small {
+    margin-top: -55px !important;
+    position: relative;
+    @include mobile {
+        margin-top: inherit !important;
+    }
+    &.bread {
+        background-color: $white;
+    }
+}
+
+//--------------------- Reset outer container (martelada de backend)
+.container.outer {
+    padding: 0;
+}
+
+//--------------------- sections global margins and style
+section {
+    margin-bottom: 35px;
+    @include mobile {
+        &:not(:first-of-type) {
+            margin: 55px 0;
+        }
+        &:nth-of-type(2) {
+            margin-top: 0;
+        }
+    }
+    &.justica-menu {
+        margin-bottom: 0px;
+    }
+    &.justica-cabecalho_listagens {
+        margin-bottom: 30px;
+    }
+}
+
+//--------------------- helpers
+.hideMobile {
+    @include media-smaller-than(985px) {
+        display: none !important;
+    }
+}
+
+.hidenMobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.showMobile {
+    @include mobile {
+        display: block!important;
+    }
+}
+
+.hideTablet {
+    @include tablet {
+        display: none !important;
+    }
+}
+
+.showTablet {
+    @include tablet {
+        display: block !important;
+    }
+}
+
+.hideDesktop {
+    @include media-bigger-than(986px) {
+        display: none !important;
+    }
+}
+
+.hidebiggerthanmobile {
+    @include media-bigger-than($max-mobile-width) {
+        display: none !important;
+    }
+}
+
+.hidebiggerthantablet {
+    @include media-bigger-than($max-tablet-width) {
+        display: none !important;
+    }
+}
+
+//--------------------- alignments
+.align-center {
+    display: flex;
+    justify-content: center;
+}
+
+.cta.align-right,
+.align-right {
+    margin-right: -15px;
+    width: 25.5%;
+    float: right;
+    @include media-smaller-than(991px) {
+        width: 33%;
+    }
+    @include tablet {
+        justify-content: flex-start;
+        width: 100%;
+        float: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.align-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+//---------------------EXTENDS
+// Buttons
+%button-xl {
+    font-size: $size14;
+    font-family: $open-regular;
+    color: $white;
+}
+
+%button-med {
+    font-size: $size16;
+    font-family: $open-bold;
+    color: $gray80;
+}
+
+%button-small {
+    @extend %button-med;
+    font-size: $size14;
+}
+
+%button-white {
+    color: $gray80;
+    font-size: $size16;
+}
+
+//--------------------- Social
+%social_base {
+    font-size: $size20;
+    color: $white;
+    width: 33px;
+    height: 33px;
+    border-radius: 50% !important;
+    //padding-top: 8px;
+    text-align: center;
+    transition: box-shadow ease-in-out .3s, opacity ease-in-out .3s;
+    cursor: pointer;
+    svg {
+        transform: scale(.7);
+    }
+}
+
+%facebook {
+    background-color: #3b5997
+}
+
+%twitter {
+    background-color: #54aced
+}
+
+%generic {
+    background-color: #979797
+}
+
+//--------------------- Next prev
+%text {
+    font-size: 18px;
+    color: $azul_main;
+    transition: color ease-in-out .3s;
+}
+
+%icon {
+    color: $gray80;
+    transition: transform ease-in-out .3s;
+}
+
+%prev {
+    span {
+        @extend %text;
+        i {
+            margin-right: 15px;
+            @extend %icon;
+        }
+    }
+}
+
+%next {
+    span {
+        @extend %text;
+        i {
+            margin-left: 15px;
+            @extend %icon;
+        }
+    }
+}

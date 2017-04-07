@@ -1,0 +1,298 @@
+﻿<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <title>Module</title>
+    <!--Generic meta-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale = 1.0, shrink-to-fit=no">
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="">
+    <!--extra meta-->
+    <meta name="google" content="notranslate" />
+    <!--fb meta-->
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:type" content="website" />
+    <!--twitter meta-->
+    <meta name="twitter:card" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <!--Add to home screen icon-->
+    <link href="images/system/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="images/system/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="images/system/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="images/system/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <link href="images/system/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+    <!--favicon-->
+    <link rel="shortcut icon" href="../images/system/favicon.ico" />
+    <link rel="icon" type="image/ico" href="../images/system/favicon.ico" />
+    <!--Links-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/head_footer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Fonts-->
+     <!-- ************  JAVASCRIPT LIBS  ******************** -->
+        <script src="../scripts/libs/jquery-3.1.1.min.js"></script>
+        <script src="../scripts/libs/slick.min.js"></script>
+        <script src="../scripts/libs/bootstrap.min.js"></script>
+        <script src="../scripts/libs/share-button.min.js"></script>
+        <!-- ************  JAVASCRIPT MAIN  ******************** -->
+        <script src="../scripts/core/main.js"></script>
+        <!-- ************  JAVASCRIPT MODULES  ******************** -->
+        <script src="../scripts/core/controls/head_home.js"></script>
+</head>
+<!--GA-->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXXXXX-X', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<body>
+    <section class="justica-menu" data-control="menu">
+    <a href="#footer" class="go_to_footer"></a>
+    <nav class="navbar navbar-default container">
+        <div class="row top">
+            <div class="logo">
+                <a href="#\">
+                    <img class="img-responsive" alt="Brand" src="../images/system/touch-icon-iphone.png" alt="Logotipo portal da Justiça">
+                </a>
+            </div>
+            <a class="search icon" href="#\">
+                <i class="fa fa-search"></i>
+            </a>
+            <div class="wrap-sd">
+                <div class="search-bar">
+                    <span id="dnn_ctl00_ClassicSearch">
+
+                        <span class="searchInputContainer" data-moreresults="See More Results" data-noresult="No Results Found">
+
+                            <input name="dnn$ctl00$txtSearch" type="text" maxlength="255" size="20" id="dnn_ctl00_txtSearch" class="NormalTextBox" autocomplete="off" placeholder="Pesquisa...">
+
+
+                        </span>
+
+                    </span>
+
+                    <a class="search" href="#">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </div>
+                <a href="#" class="ajuda">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Português
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Inglês</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Françês</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="navbar-toggle button_menu_mobile collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                <span class="sr-only">Abrir Menu</span>
+                <span class="icon-bar "></span>
+                <span class="icon-bar two"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!--
+        <ul class="desktop_nav nav navbar-nav">
+            <li class="active menu_item">
+                <a href="#\">Registos</a>
+            </li>
+            <li class="active menu_item">
+                <a href="#\">tribunais </a>
+            </li>
+            <li class="active menu_item">
+                <a href="#\">sitemas prisionais</a>
+            </li>
+            <li class="active menu_item">
+                <a href="#\">investigação criminal</a>
+            </li>
+            <li class="active menu_item">
+                <a href="#\">informação da justiça</a>
+            </li>
+            <li class="active menu_item">
+                <a href="#\">organismo</a>
+            </li>
+
+
+
+
+        </ul>
+            -->
+    </nav>
+
+</section>
+<section class="justica-head_home" data-control="head_home">
+    <noscript>
+        <style>
+            p.noscript {
+                background-color:  !important;
+                color: #267298 !important;
+                margin: 25px auto !important;
+                font-size: 1.5em;
+                text-align: center;
+                max-width: 600px;
+                line-height: 26px;
+                padding: 15px 35px;
+                border: 6px solid #f0b21d;
+            }
+            ol.dropdown-menu {
+                height: 0 !important;
+                overflow: hidden;
+            }
+            </style>
+        <p class="noscript">
+            O seu browser tem o JavaScript desabilitado, por favor ative-o para poder navegar no site
+        </p>
+    </noscript>
+    <div class="container-fluid main_container">
+        <figure>
+            <!-- <img class="backgroundImg" src="../images/dummy/background.jpg" alt=""> -->
+        </figure>
+        <div class="container">
+            <div class="col-md-6 col-sm-10 col-xs-12">
+                <h1>A Justiça está mais próxima de si
+                </h1>
+                <div class="big-search GFI">
+                    <div class="search-bar">
+                        <span id="GoogleSearch">
+                            <span class="searchInputContainer" >
+                                <input placeholder="Search ..." class="NormalTextBox" type="search" maxlength="255" size="20" name="q" >
+                            </span>
+                        </span>
+                        <a id="dnn_ctr1009_HomeSearch_GoogleSearchBox_GoogleSearchButton" class="search" data-bind="click:  GoToSearchResults">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+                <p>Pesquise a informação, o serviço ou o organismo que necessita</p>
+            </div>
+            <div class="col-md-4 hidden-sm hidden-xs">
+                <span>Temáticas</span>
+                <a href="#" class="button button-tem">
+                    <span>Transparência</span>
+                </a>
+                <a href="#" class="button button-tem">
+                    <span>Jurisprudência</span>
+                </a>
+                <a href="#" class="button button-tem">
+                    <span>Guias</span>
+                </a>
+                <a href="#" class="button button-tem">
+                    <span>Governo Aberto</span>
+                </a>
+                <a href="#" class="more">
+                   mais temáticas
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid tematicas visible-xs visible-sm">
+        <div class="container">
+            <span>Temáticas</span>
+            <a href="#" class="button button-tem">
+                <span>Transparência</span>
+            </a>
+            <a href="#" class="button button-tem">
+                <span>Jurisprudência</span>
+            </a>
+            <a href="#" class="button button-tem">
+                <span>Guias</span>
+            </a>
+            <a href="#" class="button button-tem">
+                <span>Governo Aberto</span>
+            </a>
+            <a href="#" class="more">
+                   mais temáticas
+                </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<footer class="justica-footer separate_footer" id="footer" data-control="footer">
+
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <p>Linha de apoio à Justiça</p>
+                <h5>800 800 800
+                    <a href="#" class="ajuda">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    </a>
+                </h5>
+            </div>
+            <div class="col-md-4 col-sm-6  col-xs-12">
+                <p>Linha de apoio à Justiça</p>
+                <h5>800 800 800
+                    <a href="#" class="ajuda">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    </a>
+                </h5>
+            </div>
+            <div class="social col-md-4 col-sm-12  col-xs-12">
+                <p>Nas redes sociais</p>
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="line"></div>
+       
+        <div class="footer_bottom container">
+            <div class="helpers">
+                <a href="">Link de Footer 1</a>
+                <a href="">Link de Footer 2</a>
+                <a href="">Link de Footer 3</a>
+                <a href="">Link de Footer 4</a>
+            </div>
+            <div class="pt_logo">
+                <img src="../images/system/touch-icon-iphone.png" alt="logotipo ministério">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../scripts/core/controls/footer.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

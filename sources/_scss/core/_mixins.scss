@@ -1,0 +1,131 @@
+//----------------------------------MIXINS
+
+
+//----------------------------------------KEYFRAMES
+@mixin keyframes( $animationName )
+{
+    @-webkit-keyframes $animationName {
+        @content;
+    }
+    @-moz-keyframes $animationName {
+        @content;
+    }
+    @-o-keyframes $animationName {
+        @content;
+    }
+    @keyframes $animationName {
+        @content;
+    }
+}
+//---------------------------------------- Generic Transforms
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+} 
+//---------------------------------------- Rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+//---------------------------------------- Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+} 
+// Translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+// Skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg)); 
+}
+// Transform Origin
+@mixin transform-origin ($origin) {
+	moz-transform-origin: $origin; 
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+//---------------------------------------- GRID mixins
+$min-mobile-width: 0px;
+$max-mobile-width: 512px;
+$min-tablet-width: 513px;
+$max-tablet-width: 768px;
+$min-laptop-width: 769px;
+$max-laptop-width: 1023px;
+$min-desktop-width: 1024px;
+$max-desktop-width: 1280px; 
+
+//custom
+$custom_mobile_max_width: 892px;
+$custom_desktop_min_width: 893px;
+
+
+//---------------------------------------- MEDIA QUERieS
+@mixin mobile {
+  @media (min-width: #{$min-mobile-width}) and (max-width: #{$max-mobile-width}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$min-mobile-width}) and (max-width: #{$max-tablet-width}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$min-mobile-width}) and (max-width: #{$max-laptop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$min-mobile-width}) and (max-width: #{$max-desktop-width}) {
+    @content;
+  }
+}
+
+//---------------------------------------- CUSTOM MEDIA SIZES 
+/*usar esta mixin quando se quer expecificar um limite minimo a infinito.*/
+  /*ex:
+      div{
+        @include media-bigger-than(750px);
+      }
+  */
+
+@mixin media-bigger-than($value) {
+
+  @media  (min-width: #{$value}) {
+    @content;
+  }
+}
+/*usar esta mixin quando se quer expecificar um limite de 0px a Xpx.*/
+  /*ex:
+      div{
+        @include media-smaller-than(1000px);
+      }
+  */
+
+@mixin media-smaller-than($value) {
+  
+  @media (min-width: 0px) and (max-width: #{$value}) {
+    @content;
+  }
+}
+
+/*usar esta mixin quando se quer expecificar um limite de Xpx a Ypx.*/
+  /*ex:
+      div{
+        @include media-between(900px,1000px);
+      } 
+  */ 
+@mixin media-between($smallerValue,$biggerValue) {
+  
+  @media (min-width: #{$smallerValue}) and (max-width: #{$biggerValue}) {
+    @content;
+  }
+}

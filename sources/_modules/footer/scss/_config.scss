@@ -1,0 +1,142 @@
+.justica-footer {
+    padding: 0;
+    .feedback {
+        background: $orange;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            @include tablet {
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 17px 0;
+            }
+            p {
+                font-family: $open-bold;
+                color: $grayfooter;
+                font-size: $size18;
+                margin: 0;
+                @include tablet {
+                    margin: 0 0 5px 0;
+                    text-align: center;
+                }
+            }
+            .buttons {
+                display: flex;
+                @include mobile {
+                    flex-direction: column;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .footer {
+        background: $grayfooter;
+        padding: 50px 0;
+        .line {
+            width: 100%;
+            border-bottom: 1px solid $gray50;
+        }
+        @include media-between(514px, $custom_mobile_max_width) {
+            .social {
+                display: flex;
+                align-items: center;
+                a {
+                    &:first-of-type {
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+
+        .container:not(:last-child) {
+            padding-bottom: 35px;
+            &:nth-child(3) {
+                display: flex;
+                padding: 25px;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                @include tablet {
+                    display: none;
+                }
+                a {
+                    margin: 5px;
+                    &:first-child {
+                        padding-left: 8px;
+                    }
+                }
+            }
+            p {
+                color: $white;
+                font-size: $size24;
+                margin-top:15px;
+                margin-bottom:0;
+            }
+            h5 {
+                color: $orange;
+                font-size: $size36;
+                display: flex;
+                margin-top: 0;
+                .ajuda {
+                    margin-top: 5px;
+                    font-size: $size13;
+                    line-height: inherit;
+                }
+            }
+            a {
+                color: $white;
+                font-size: 40px;
+                margin: 0 5px;
+                line-height: 47px;
+                transition: opacity ease-in-out .3s;
+                &:hover {
+                    opacity: .6;
+                }
+            }
+        }
+        .footer_bottom {
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+            @include mobile {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .helpers {
+                flex: 1;
+                max-width: 430px;
+                display: flex;
+                justify-content: space-between;
+                @include media-smaller-than(830px) {
+                    flex-direction: column;
+                }
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    font-size: $size14;
+                     @include media-smaller-than(830px) {
+                         margin: 8px 0;
+                       }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .pt_logo {
+                flex: 1;
+                text-align: right;
+                @include mobile {
+                    margin-top: 15px;
+                }
+                img {
+                    max-width: 140px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
