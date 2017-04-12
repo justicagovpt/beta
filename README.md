@@ -9,4 +9,5 @@ Exemplos de páginas
 
 [Formulário](http://htmlpreview.github.io/?https://github.com/justicagovpt/beta/blob/master/_preview/templates/global_form.html)
 
+[Artigo](http://htmlpreview.github.io/?https://github.com/justicagovpt/beta/blob/master/_preview/templates/artigo.html)
 
