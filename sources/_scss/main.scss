@@ -1,0 +1,24 @@
+﻿//---------------------------  Generic imports 
+@import 'core/reset';
+@import 'core/mixins'; 
+@import 'core/config';
+@import 'core/skeleton';
+@import 'core/components';
+@import 'core/fonts';
+
+//---------------------------  Module imports 
+// Estrutura
+@import '../_modules/cookie_bar/scss/_module';
+@import '../_modules/footer/scss/_module';
+@import '../_modules/menu/scss/_module';
+// Pesquisa Home
+@import '../_modules/head/scss/_module';
+//Fomulario
+@import '../_modules/global_form/scss/_module';
+// Head Generico
+@import '../_modules/LP_head_generic/scss/_module';
+// Listagem
+@import '../_modules/listagem/scss/_module';
+// Corpo
+@import '../_modules/corpo_artigo/scss/_module.scss';
+

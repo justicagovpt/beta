@@ -11,3 +11,4 @@ Exemplos de páginas
 
 [Artigo](http://htmlpreview.github.io/?https://github.com/justicagovpt/beta/blob/master/_preview/templates/artigo.html)
 
+[Listagem](http://htmlpreview.github.io/?https://github.com/justicagovpt/beta/blob/master/_preview/templates/listagem.html)
