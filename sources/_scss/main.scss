@@ -1,4 +1,4 @@
-﻿//---------------------------  Generic imports 
+//---------------------------  Generic imports 
 @import 'core/reset';
 @import 'core/mixins'; 
 @import 'core/config';
@@ -21,4 +21,8 @@
 @import '../_modules/listagem/scss/_module';
 // Corpo
 @import '../_modules/corpo_artigo/scss/_module.scss';
+// serviço
+@import '../_modules/LP_head_servicos/scss/_module.scss';
+@import '../_modules/LP_body_servicos/scss/_module.scss';
+@import '../_modules/cta_servico/scss/_module.scss';
 

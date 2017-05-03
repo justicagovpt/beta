@@ -1,0 +1,114 @@
+.justica-cta_servico {
+    @include tablet {
+        display: none;
+    }
+    .sticky_bottom {
+        background-color: $gray80;
+        height: 80px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        z-index: 9999999999;
+        left: 50%;
+        transform: translate(-50%, 80px);
+        transition: transform ease-in-out .3s;
+        @each $theme,
+        $color in $colorsList {
+            @at-root .theme--#{$theme} & {
+                transition: transform .3s ease-in-out .8s !important;
+                transform: translate(-50%, 0) !important;
+            }
+        }
+        p {
+            font-size: $size24;
+            color: $white;
+            height: 80px;
+            line-height: 86px;
+            strong {
+                font-family: $open-bold;
+                font-weight: inherit;
+            }
+        }
+        button,
+        a {
+            &.buttonExecutaServico {
+                font-family: $open-semibold;
+                font-size: $size20;
+                margin-left: auto;
+                height: 75px;
+                color: $white;
+                text-align: center;
+                appearance: none;
+                background-color: transparent;
+                border: none;
+                position: relative;
+                &.start {
+                    display: block;
+                    padding: 16px 30px;
+                    width: 255px;
+                    box-shadow: 0 5px $green_dark;
+                    background-color: $green;
+                    @each $theme,
+                    $color in $colorsList {
+                        @at-root .theme--#{$theme} & {
+                            background-color: $color;
+                        }
+                    }
+                    @each $theme,
+                    $color in $colorsList {
+                        @at-root .theme--#{$theme} & {
+                            box-shadow: 0 5px darken($color, 10%);
+                        }
+                    }
+                    text-align: left;
+                    color: $white;
+                    transition: background-color ease-in-out .3s;
+                    @include media-smaller-than(1180px) {
+                        width: 218px;
+                        font-size: $size18;
+                    }
+                    @include tablet {
+                        width: 100%;
+                    }
+                    i {
+                        position: absolute;
+                        right: 23px;
+                        top: 57%;
+                        transform: translateY(-50%);
+                        transition: transform ease-in-out .3s, color ease-in-out .3s;
+                    }
+                    &:hover,
+                    &:focus {
+                        background-color: $green_dark;
+                        opacity: 1;
+                        text-decoration: none;
+                        color: $white;
+                        @each $theme,
+                        $color in $colorsList {
+                            @at-root .theme--#{$theme} & {
+                                background-color: darken($color, 10%);
+                            }
+                        }
+                    }
+                    span {
+                        display: block;
+                        margin: 0;
+                        vertical-align: inherit;
+                        line-height: 50px;
+                        @each $theme,
+                        $color in $colorsList {
+                            @at-root .theme--#{$theme} & {
+                               font-size: $size16;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    text-decoration: underline;
+                    color: inherit;
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
