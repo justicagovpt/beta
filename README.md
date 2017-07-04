@@ -15,3 +15,5 @@ Exemplos de páginas
 [Listagem](http://htmlpreview.github.io/?https://github.com/justicagovpt/beta/blob/master/_preview/templates/listagem.html)
 
 [Homepage SubSite](http://htmlpreview.github.io/?https://github.com/justicagovpt/beta/blob/master/_preview/templates/HomeSubsite.html)
+
+[Head Serviço Botão](http://htmlpreview.github.io/?https://github.com/justicagovpt/beta/blob/master/_preview/templates/HeadButton.html)
