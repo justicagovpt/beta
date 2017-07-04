@@ -1,0 +1,92 @@
+.justica-LP_head_generic {
+    position: relative;
+    
+    &.amarelo {
+        .background {
+            background-color: $orange;
+        }
+
+        em {
+            color: $white;
+        }
+
+        .links {
+            a {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .content_container{
+
+    .inner_head_content {
+        margin-top: 30px;
+
+        em {
+            font-size: $size13;
+            font-family: $open-regular;
+            text-transform: uppercase;
+            font-style:normal;
+        }
+        
+        h1 {
+            color: $black;
+            margin-top: 8px;
+        }
+
+        p {
+            opacity: 1;
+            padding: 0;
+            color: $gray80;
+            font-size: $size22;
+            line-height: $size26;
+            margin-top: 18px;
+            font-family: $open-semibold;
+        }
+    }
+  
+    .container_button{
+        
+        p {
+        font-size: $size16;
+        font-family: $open-regular;
+        color: $white;
+        display:inline-block !important;
+        padding:20px 20px 25px 0px;
+        opacity:1;
+        margin-bottom:0px;
+        @include media-between(0px, 769px) {
+                   width:100%;
+                  }
+       
+            .buttonExecutaServico{
+                width:100%;
+                padding: 30px 62px 30px 30px;
+                  @include media-between(0px, 769px) {
+                   width:100%;
+                  }
+                
+            }
+        }
+    }
+    
+
+    ._info{
+        p{
+        display:inline-block;
+        color:$black;
+        font-size:$size16;
+        margin-bottom:30px;
+        }
+    }
+    }
+
+    h3 {
+        margin-bottom: 15px;
+    }
+
+
+    
+    
+}
