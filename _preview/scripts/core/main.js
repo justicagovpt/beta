@@ -216,6 +216,106 @@ justica.MAIN = (function () {
                  }
              });*/
 
+
+            //Script feedback #########################
+            var footer = $('footer');
+
+            //open hidden feedback
+            footer.find('.help_improve .button').on('click', function () {
+                //contextualised text
+                if ($(this).hasClass('yes')) {
+                    //SHOW
+                    $('footer').find('label').text('Obrigado pelo seu contributo');
+                    $('footer').find('#feedback-form').attr("placeholder", "Como podemos melhorar?");
+
+                } else {
+                    //SHOW
+                    $('footer').find('label').text('Ajude-nos a melhorar');
+                    $('footer').find('#feedback-form').attr("placeholder", "Diga-nos o que procurava ou como podemos melhorar esta página");
+                }
+
+                //open
+                $(this).addClass('open');
+                if (!$(this).hasClass('open')) {
+                    footer.find('.hidden_feedback').hide('fast');
+                    footer.find('#feedback-form').hide('fast');
+                    footer.find('#feedback-form').val('');
+                    footer.find('.submited').removeClass('open');
+
+                } else {
+                    /*footer.find('.help_improve').css({
+						'opacity': '0',
+						'pointer-events': 'none'
+					});*/
+                    footer.find('.specify, .submit, #feedback-form, .end').css({
+                        'opacity': '1',
+                        'pointer-events': 'auto'
+                    });
+                    footer.find('.help_improve').hide('fast');
+                    footer.find('.end, .specify, .submit, #feedback-form').show();
+                    footer.find('.hidden_feedback').show('fast');
+                }
+            });
+
+            //close footer
+            footer.find('.end').on('click', function () {
+                footer.find('.help_improve').css({
+                    'opacity': '1',
+                    'pointer-events': 'auto'
+                });
+                footer.find('.hidden_feedback').hide('fast');
+                footer.find('.help_improve').show('slow');
+                footer.find('#feedback-form').val('');
+            });
+
+            //Submit + exit transitions
+            footer.find('button').on('click', function () {
+                setTimeout(function () {
+                    footer.find('.specify, .questions, .end').css('opacity', '0');
+                }, 0);
+                setTimeout(function () {
+                    $('footer').find('.submit').css({
+                        'opacity': '0',
+                        'pointer-events': 'none'
+                    });
+                }, 200);
+                setTimeout(function () {
+                    footer.find('.submited').removeClass('open');
+                    footer.find('.submited').show();
+                    footer.find('.submited').addClass('open');
+                }, 600);
+                setTimeout(function () {
+                    footer.find('.down_icon').removeClass('open');
+                    /*footer.find('.feedback').animate({
+						height: 0
+					}, {
+						easing: 'swing',
+						duration: 300,
+						complete: function () {
+							footer.find('.feedback').hide();
+						}
+					});*/
+                    footer.find('#feedback-form').hide('300');
+                    footer.find('.hidden_feedback').hide('fast');
+                    footer.find('.end, .specify, .submit, .submited').hide('300');
+                    footer.find('#feedback-form').val('');
+                    footer.find('.help_improve').show('300');
+                }, 2000);
+                setTimeout(function () { }, 2200);
+
+            });
+
+            //word count			
+            var maxLength = 200;
+            $('#feedback-form').keyup(function () {
+                var length = $(this).val().length;
+                var length = maxLength - length;
+                $('.chars').text(length);
+            });
+
+
+            //END script feedback ###############################
+
             //-------------- Active search ##############
 
             $('.search-bar input').on('focus', function () {

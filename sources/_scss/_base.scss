@@ -1,0 +1,45 @@
+﻿
+//---------------------------  Generic imports 
+@import 'core/reset';
+@import 'core/mixins'; 
+@import 'core/config';
+@import 'core/skeleton';
+@import 'core/components';
+@import 'core/content_components';
+@import 'core/fonts';
+
+//---------------------------  Module imports 
+// Estrutura
+@import '../_modules/cookie_bar/scss/_module';
+@import '../_modules/footer/scss/_module';
+@import '../_modules/menu/scss/_module';
+@import '../_modules/footer_small/scss/_module';
+// Pesquisa Home
+@import '../_modules/head/scss/_module';
+//Fomulario
+@import '../_modules/global_form/scss/_module';
+// Head Generico
+@import '../_modules/LP_head_generic/scss/_module';
+// Head Generico Image
+@import '../_modules/LP_head_generic_img/scss/_module.scss';
+@import '../_modules/LP_head_generic_img_3_1/scss/_module.scss';
+// Head Serviço Botão
+@import '../_modules/head_servico_button/scss/_module';
+@import '../_modules/head_servico_search/scss/_module';
+@import '../_modules/body_servico/scss/_module.scss';
+// Listagem
+@import '../_modules/listagem/scss/_module';
+@import '../_modules/cabecalho_listagens/scss/_module.scss';
+// Corpo
+@import '../_modules/corpo_artigo/scss/_module.scss';
+//Form
+@import '../_modules/LP_head_form/scss/_module.scss';
+@import '../_modules/footer_organismo/scss/_module.scss';
+// serviço
+@import '../_modules/LP_head_servicos/scss/_module.scss';
+@import '../_modules/LP_body_servicos/scss/_module.scss';
+@import '../_modules/cta_servico/scss/_module.scss';
+// Subsite Home
+@import '../_modules/subsite_home_head/scss/_module.scss';
+@import '../_modules/menu_separated/scss/_module.scss';
+@import '../_modules/slider_organismo/scss/_module.scss';

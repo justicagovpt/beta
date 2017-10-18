@@ -1,0 +1,626 @@
+﻿/*###########     Content Generic Components     #############*/
+//section
+.justica-detalhe_servico.justica-LP_body_generic.container{
+    margin-top:30px !important;
+}
+//ASIDE TEMPLATE FOR CLONE MENU with different stylings
+aside {
+    @include tablet {
+        display: block;
+    }
+    //Default behavior and styling applyed to guides and othe pages with aside
+    .info_right{
+        .aside_row{
+            margin:0px !important;
+            padding:0px !important;
+            border-bottom:none !important;
+        }
+    }
+    .aside_row {
+        margin-left: 0px;
+        padding: 10px 0;
+        border-bottom: none;
+
+        &:last-child {
+            border-bottom: 1px solid $gray10;
+        }
+
+        &.ajuda {
+            padding-top: 50px;
+        }
+
+        &.aside_row {
+            border-bottom: 0px;
+            margin: 0;
+        }
+
+        .link_right {
+            font-size: $size18;
+            font-family: $open-regular;
+            display: block;
+            color: $azul_main;
+            line-height: 26px;
+            cursor: pointer;
+        }
+
+        .big-link {
+            font-size: $size18;
+            font-family: $open-regular;
+            text-decoration: underline;
+        }
+    }
+    //Bold style applyed to links mainly to services
+    &.heavy {
+        // padding-left: 50px;
+        button {
+            margin: 15px 0;
+        }
+
+        h4 {
+            margin: 50px 0 30px 0;
+            font-size: $size30;
+        }
+
+        .aside_row {
+            margin-left: 0px;
+            padding: 20px 0;
+            border-top: 1px solid $gray10;
+            border-bottom: 1px solid $gray10;
+            margin-bottom: 20px;
+
+            &.ajuda {
+                padding-top: 50px;
+                border-top: 0;
+            }
+
+            .big-link {
+                font-size: $size18;
+                font-family: $open-bold;
+            }
+        }
+
+        a.buttonExecutaServico.start {
+            display: inline-block;
+        }
+
+        em {
+            display: block;
+            font-size: $size14;
+            margin-bottom: 3px;
+        }
+
+        a {
+            margin: 8px 0;
+            cursor: pointer;
+            transition: color ease-in-out .2s;
+        }
+
+        p {
+            // padding: 5px 0;
+            //border-bottom: 1px solid $gray10;
+        }
+    }
+}
+
+//list with checks and left green bar (MODULO 1)
+.justica-detalhe_service_page_module1 {
+    #list-box {
+        margin-top: 10px;
+        margin-bottom: 20px;
+         
+        .list-box_outer_container {
+            position: relative;
+
+            .list-box_inner_container {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    border: 1px solid;
+                    border-width: 0 0 0 10px;
+                    border-color: $green_left_bar_color#E0F0C1;
+                }
+
+                ul {
+                    @include list-style-check;
+                    padding: 15px 0;
+
+                    li {
+                        font-family: $open-regular;
+                        font-size: 18px;
+                        margin-left: 50px;
+                        padding: 20px 20px 0 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//CONTENT NAV BLUE MAIN (MODULO 2)
+body {
+    .menu_blue {
+        background-color: $azul_bloco;
+        margin-top: 20px;
+        margin-bottom: 70px;
+
+        h3 {
+            font-family: "Raleway", $open-semibold;
+            font-weight: bold;
+            color: $black;
+            padding: 35px 35px 0px 35px;
+            margin-bottom: -15px;
+        }
+
+        .menu_blue_content {
+            display: inline-block;
+            font-family: $open-regular;
+            font-size: 18px;
+            width: 100%;
+            padding: 35px;
+
+            a {
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                &:active {
+                    color: $black;
+                }
+            }
+
+            .aside_row {
+                color: $azul_main;
+                width: 48%;
+                float: left;
+                display: block;
+
+                &:nth-child(2n+1) {
+                    clear: both;
+                }
+
+                &:nth-child(2n-1) {
+                    margin-right: 4%;
+                }
+
+                &:nth-child(n+3) {
+                    margin-top: 15px;
+                }
+
+                .redactor-box & {
+                    clear: both;
+                    margin-top: 10px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    color: $gray80;
+                }
+
+                @include media-smaller-than(601px) {
+                    width: 100%;
+
+                    &:nth-child(n+1) {
+                        clear: both;
+                    }
+
+                    &:nth-child(2n-1) {
+                        margin-right: 0;
+                    }
+
+                    &:nth-child(n+2) {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//FLOATING CONTENT NAV COMPONENT
+.menu_blue_content.contNav {
+    line-height: 20px;
+    padding: 20px 30px;
+    padding-bottom: 15px;
+    background-color: $azul_bloco;
+
+    &.contentNavAside {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &.contentNavBody {
+        @include media-bigger-than(769px) {
+            display: none;
+        }
+    }
+
+    &.fixed {
+        width: 255px;
+        position: fixed;
+        top: 15px;
+    }
+
+    @include tablet {
+        position: fixed;
+        top: 50%;
+        right: -235px;
+        z-index: 9999;
+        width: 235px;
+        margin-left: 50px;
+        transform: translateY(-50%);
+
+        &:before {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\f13d";
+            background-color: $azul_main;
+            padding: 19px;
+            position: absolute;
+            left: -53px;
+            top: 0px;
+            color: $white;
+            transition: backgroud-color ease-in-out .3s;
+            box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.12), -2px 1px 3px -2px rgba(0, 0, 0, 0.22);
+        }
+
+        &.open {
+            box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.12), -2px 1px 3px -2px rgba(0, 0, 0, 0.22);
+        }
+    }
+
+    a {
+        color: $azul_main;
+        display: block;
+        margin-bottom: 8px;
+        transition: color .2s;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+            color: $gray80;
+        }
+
+        &.aside_row {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+//100% with gray (MODULO 3)
+.justica-detalhe_service_page_module3 {
+    #list-box {
+        background-color: $gray2;
+
+        .list-box_outer_container {
+            position: relative;
+
+            .list-box_inner_container {
+                ul {
+                    @include list-style-arrow-right;
+                    padding: 35px 0;
+
+                    li {
+                        font-family: $open-regular;
+                        font-size: 18px;
+                        margin-left: 53px;
+                        //padding: 0 35px 0 6px;
+                        &:nth-child(n+2) {
+                            margin-top: 35px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//warning module all red (MODULO 5)
+.justica-detalhe_service_page_module5 {
+    #list-box {
+        background-color: $red_check_list_bckclr;
+
+        .list-box_outer_container {
+            position: relative;
+
+            .list-box_inner_container {
+                ul {
+                    @include list-style-cross-red;
+                    padding: 35px 0;
+
+                    li {
+                        font-family: $open-regular;
+                        font-size: 18px;
+                        margin-left: 53px;
+                        padding: 0 35px 0 8px;
+
+                        .list_box_small_text {
+                            font-family: $open-regular;
+                            font-size: 13.5px;
+                            margin: 0;
+                        }
+
+                        &:nth-child(n+2) {
+                            margin-top: 35px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Componente texto à esquerda -> caixa cinza à direita (Modulo 6 + 11)
+.justica-detalhe_service_page_module6,
+.justica-detalhe_service_page_module11 {
+    .conteudo_servicos {
+        .margin_servicos {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        h4 {
+            font-family: $open-semibold;
+            font-size: $size30;
+            line-height: 34px;
+            color: $gray80;
+            margin-bottom: 25px;
+
+            @include mobile {
+                font-size: $size18;
+            }
+
+            strong {
+                font-family: $open-semibold;
+            }
+        }
+
+        .subtitulo_servicos {
+            border-top: 0px;
+            margin: 40px 0px 20px 0px;
+
+            .left_servicos {
+                padding-left: 0px;
+
+                @include mobile {
+                    padding-bottom: 30px;
+                }
+
+                h4 {
+                    font-family: $open-semibold;
+                    font-size: $size24;
+                    line-height: 30px;
+                    color: $gray80;
+                    margin-top: 40px;
+
+                    @include mobile {
+                        font-size: $size18;
+                    }
+                }
+            }
+
+            .mapa {
+                padding: 0px;
+            }
+
+            .right_servicos {
+                background-color: $gray2;
+                padding: 20px 10px;
+
+                ul {
+                    @include list-style-arrow-right;
+                    font-size: $size16;
+                    font-family: $open-regular;
+                    line-height: 22px;
+                    padding-left: 40px;
+
+                    li {
+                        margin: 15px 0;
+                    }
+                }
+                //with left gray bar
+                #list {
+                    ol {
+                        list-style: none;
+                        padding: 5px 0px 0px 50px;
+                        display: inline-block;
+                        position: relative;
+                        margin: 10px 0;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 4px;
+                            left: 20px;
+                            height: 92%;
+                            width: 10px;
+                            display: inline-block;
+                            background-color: $grey_helper_tooltip;
+                        }
+
+                        li {
+                            margin: 5px 0;
+                        }
+                    }
+                }
+
+                p {
+                    padding: 0 20px;
+                }
+
+                .nota {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//RED ALERT COMPONENT (Modulo 7)
+.alert_box {
+    margin-bottom: 20px;
+    background-color: $red_check_list_bckclr;
+
+    .alert_box_content {
+        padding: 35px 35px 35px 35px;
+
+        a.detalhe_service_link {
+            color: $azul_main;
+            cursor: pointer;
+        }
+
+        .img_container {
+            display: inline-block;
+            float: left;
+
+            .i {
+                @include icon-info;
+                float: left;
+                margin-right: 30px;
+                display: inline-block;
+            }
+        }
+
+        .info_text_container {
+            display: block;
+            overflow: hidden;
+            font-size: 16px;
+            font-family: $open-semibold;
+            line-height: 24px;
+
+            a {
+                font-family: $open-semibold;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+//Green Call to action (Modulo 8)
+.call_to_action_box {
+    background-color: $green_call_to_action_bckclr;
+    padding: 35px;
+    margin-bottom: 20px;
+
+    .call_to_action_content {
+        display: flex;
+        justify-content: space-between;
+
+        @include media-smaller-than(601px) {
+            flex-direction: column;
+        }
+
+        .call_to_action_text {
+            margin-right: 20px;
+
+            h4 {
+                font-family: $open-semibold;
+                margin-bottom: 5px;
+            }
+
+            p {
+                line-height: 22px;
+                font-size: $size16;
+                margin: 3px 0;
+
+                &:last-child {
+                    margin-top: 0px;
+                    font-family: $open-regular;
+                    font-size: $size14;
+                }
+            }
+        }
+    }
+}
+
+//CONTACT AND ROUND IMAGE COMPONENT (Modulo 10)
+.box {
+    background-color: $gray2;
+    padding: 35px;
+
+    .inner_box {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .col-xs-3 {
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        .col-xs-9 {
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        figure {
+            margin: 0 auto;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            @include tablet {
+                margin: inherit;
+            }
+
+            @include mobile {
+                margin-bottom: 10px;
+            }
+
+            img {
+                width: 100%;
+                //height: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        .name {
+            text-transform: capitalize;
+            font-size: $size24;
+            font-family: $open-semibold;
+            margin-bottom: 5px;
+
+            @include laptop {
+                line-height: 28px;
+            }
+        }
+
+        .title {
+            font-size: $size18;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+        }
+
+        .link {
+            font-size: $size14;
+            color: $azul_main;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

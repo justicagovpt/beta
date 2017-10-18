@@ -1,0 +1,29 @@
+.justica-cookie_bar {
+    &.sticky_top {
+        display: none;
+        background-color: $gray80;
+        height: auto;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 9999999999;
+        left: 50%;
+        padding: 20px 0;
+        transform: translate(-50%, -1px);
+        transition: transform ease-in-out .3s;
+        p {
+            margin-bottom: 0;
+            font-size: $size14;
+            color: $white;
+            line-height: 20px;
+            strong {
+                font-family: $open-bold;
+                font-size: $size18;
+            }
+            a {
+                color: $orange;
+                text-decoration: underline;
+            }
+        }
+    }
+}

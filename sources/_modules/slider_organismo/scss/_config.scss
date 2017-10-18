@@ -1,0 +1,50 @@
+﻿.justica-slider_organismo {
+    .container {
+        .el_wrap {
+            .slide {
+                height: initial;
+                @include mobile {
+                    padding: inherit;
+                    margin: 25px 7px;
+                }
+                .destaques_organismo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 125px;
+                    background-color: $green;
+                    transition: background-color ease-in-out .3s;
+                    @each $theme,
+                    $color in $colorsList {
+                        @at-root .theme--#{$theme} & {
+                            background-color: $color;
+                        }
+                    }
+                    span {
+                        font-family: $open-bold;
+                        font-size: $size22;
+                        color: $white;
+                        text-align: center;
+                        padding: 0px 20px;
+                    }
+                    &:hover {
+                        @each $theme,
+                        $color in $colorsList {
+                            @at-root .theme--#{$theme} & {
+                                background-color: darken($color, 15%);
+                            }
+                        }
+                    }
+                }
+            }
+            .slick-dots {
+                bottom: -7%;
+                left: 50%;
+                @include mobile {
+                    bottom: -10%;
+                }
+            }
+        }
+    }
+}

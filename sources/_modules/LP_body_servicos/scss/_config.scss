@@ -1,28 +1,39 @@
 .justica-LP_body_servicos {
-	.container {
-		background: $white;
-		position: relative;
-	}
-	.row {
-		//padding: 0 35px;
-		@include tablet {
-			padding: inherit;
-		}
-		&:last-child {
-			padding: 35px 0;
-			border-top: 1px solid $gray10;
-		}
-	}
-	p {
+    .container {
+        background: $white;
+        position: relative;
+    }
+
+    .row {
+        //padding: 0 35px;
+        @include tablet {
+            padding: inherit;
+        }
+
+        &:last-child {
+            padding: 35px 0;
+            border-top: 1px solid $gray10;
+        }
+    }
+
+    p, .detalhe_service_normal_text  {
+		font-size: $size18;
+		line-height: $size26;
 		margin: 15px 0;
+		word-break: break-word;
+		@include mobile {
+			font-size: $size16;
+		}
 	}
-	h2 {
+	h2, .detalhe_service_title {
 		margin-top: 0;
-		font-family: $open-semibold;
-		font-size: $size20;
-		line-height: 28px;
+		font-family: "Raleway", $open-semibold;
+        font-weight:bold;
+		font-size: $size30;
+		line-height: 34px;
 		color: $gray80;
-		margin-bottom: 8px;
+		margin-bottom: 20px;
+         letter-spacing:-1px;
 		@include mobile {
 			font-size: $size16;
 		}
@@ -31,9 +42,22 @@
 		margin-bottom: 8px;
 		margin-top: 0;
 		font-family: $open-semibold;
+		font-size: $size24;
+		//line-height: 28px;
+		color: $gray80;
+        letter-spacing:-0.5px;
+		@include mobile {
+			font-size: $size16;
+		}
+	}
+	h4 {
+		margin-bottom: 8px;
+		margin-top: 0;
+		font-family: $open-semibold;
 		font-size: $size18;
 		//line-height: 28px;
 		color: $gray80;
+        letter-spacing: 0px;
 		@include mobile {
 			font-size: $size16;
 		}
@@ -41,100 +65,138 @@
 	h5 {
 		margin-top: 0;
 		font-family: $open-semibold;
-		font-size: $size22;
+		font-size: $size16;
 		line-height: 28px;
 		color: $gray80;
 		margin-bottom: 8px;
+        letter-spacing: 0px;
 		@include mobile {
 			font-size: $size16;
 		}
 	}
-	strong {
-		font-family: $open-bold;
-		font-weight: inherit;
+	.detalhe_service_subtitle {
+		font-family: $open-semibold;
+		font-size: $size18;
+		margin-bottom: 20px;
 	}
-	i:not('.fa') {
-		font-family: $open-italic;
-	}
-	ol {
-		list-style: decimal;
-		font-size: $size16;
+	.detalhe_service_small_text {
 		font-family: $open-regular;
+		font-size: $size14;
 		line-height: 22px;
-		padding-left: 40px;
-		margin: 25px 0;
-		li {
-			margin-bottom: 10px;
-		}
+		margin-bottom: 20px;
 	}
-	ul {
-		list-style: inherit;
-		font-size: $size16;
-		font-family: $open-regular;
-		line-height: 22px;
-		padding-left: 40px;
-		margin: 25px 0;
-		li {
-			margin-bottom: 10px;
-		}
-	}
-	table {
-		caption {
-			color: $gray80;
-			font-family: $open-semibold;
-			font-size: $size16;
-			text-align: center;
-			margin-bottom: 10px;
-		}
-		tbody {
-			tr {
-				border: 1px solid $gray30;
-				td {
-					font-size: $size16;
-					padding: 12px;
-					border: 1px solid $gray30;
-					vertical-align: middle;
-				}
-			}
-		}
-	}
-	//SIDE STUFF
-	aside {
-		// padding-left: 50px;
-		@include tablet {
-			display: none;
-		}
-		h4 {
-			margin: 50px 0 30px 0;
-			font-size: $size30;
-		}
-		.aside_row {
-			margin-left: 0px;
-			padding: 20px 0;
-			border-top: 1px solid $gray10;
-			border-bottom: 1px solid $gray10;
-			margin-bottom: 20px;
-			&.ajuda {
-				padding-top: 50px;
-				border-top: 0;
-			}
-		}
-		em {
-			display: block;
-			font-size: $size14;
-			margin-bottom: 3px;
-		}
-		a {
-			margin: 8px 0;
-			cursor: pointer;
-			transition: color ease-in-out .2s;
-		}
-		p {
-			padding: 5px 0;
-			//border-bottom: 1px solid $gray10;
-		}
-	}
-	//BOTTOM STUFF
+
+    strong {
+        font-family: $open-bold;
+        font-weight: inherit;
+    }
+
+    i:not('.fa') {
+        font-family: $open-italic;
+    }
+
+    ol {
+        list-style: decimal;
+        font-size: $size16;
+        font-family: $open-regular;
+        line-height: 22px;
+        padding-left: 40px;
+        margin: 25px 0;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    ul {
+        list-style: inherit;
+        font-size: $size16;
+        font-family: $open-regular;
+        line-height: 22px;
+        padding-left: 40px;
+        margin: 25px 0;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    table {
+        caption {
+            color: $gray80;
+            font-family: $open-semibold;
+            font-size: $size16;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        tbody {
+            tr {
+                border: 1px solid $gray30;
+
+                td {
+                    font-size: $size16;
+                    padding: 12px;
+                    border: 1px solid $gray30;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    //SIDE STUFF
+    aside {
+        // padding-left: 50px;
+        @include tablet {
+            display: none;
+        }
+
+        h4 {
+            margin: 50px 0 30px 0;
+            font-size: $size30;
+        }
+
+        .aside_row {
+            margin-left: 0px;
+            padding: 20px 0;
+            /*border-top: 1px solid $gray10;*/
+            border-bottom: 1px solid $gray10;
+            margin-bottom: 20px;
+
+            &.ajuda {
+                padding-top: 50px;
+                border-top: 0;
+            }
+
+            .outros_servicos {
+                p {
+                    a {
+                        font-size: 18px;
+                        line-height: 5px;
+                        margin: 0;
+                        word-break: break-word;
+                    }
+                }
+            }
+        }
+
+        em {
+            display: block;
+            font-size: $size14;
+            margin-bottom: 3px;
+        }
+
+        a {
+            margin: 8px 0;
+            cursor: pointer;
+            transition: color ease-in-out .2s;
+        }
+
+        p {
+            padding: 5px 0;
+            //border-bottom: 1px solid $gray10;
+        }
+    }
+//BOTTOM STUFF
 	.bottom {
 		margin: 55px 0;
 		display: flex;
@@ -150,6 +212,7 @@
 			font-size: $size12;
 			color: $gray50;
 			margin-right: 10px;
+            font-style:normal;
 			@include mobile {
 				margin: 20px 0;
 			}
@@ -157,8 +220,9 @@
 		.share {
 			margin-top: -8px;
 			em {
+                font-style:normal;
 				@include mobile {
-					margin: 5px 0;
+					margin: 5px 15px 5px 0;
 					display: block;
 				}
 			}
@@ -180,20 +244,25 @@
 			}
 		}
 	}
-	.bottom-nav {
-		position: relative;
-		display: block;
-		@include tablet {
-			margin: 0 15px;
-		}
-		a {
-			position: absolute;
-			&.prev {
-				left: 0;
-			}
-			&.next {
-				right: 0;
-			}
-		}
-	}
+
+    .bottom-nav {
+        position: relative;
+        display: block;
+
+        @include tablet {
+            margin: 0 15px;
+        }
+
+        a {
+            position: absolute;
+
+            &.prev {
+                left: 0;
+            }
+
+            &.next {
+                right: 0;
+            }
+        }
+    }
 }

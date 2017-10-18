@@ -76,7 +76,7 @@
         <div class="row top">
             <div class="logo">
                 <a href="#\">
-                    <img class="img-responsive" alt="Brand" src="../images/system/touch-icon-iphone.png" alt="Logotipo portal da Justiça">
+                    <img class="img-responsive" alt="Brand" src=".../../../images/JusticaLogo.png" alt="Logotipo portal da Justiça">
                 </a>
             </div>
             <a class="search icon" href="#\">
@@ -620,19 +620,20 @@
             O seu browser tem o JavaScript desabilitado, por favor ative-o para poder navegar no site
         </p>
     </noscript>
+    <h2 class="section-heading-hidden">A Justiça está mais próxima de si</h2>
     <div class="container-fluid main_container">
         <figure>
             <!-- <img class="backgroundImg" src="../images/dummy/background.jpg" alt=""> -->
         </figure>
         <div class="container">
             <div class="col-md-6 col-sm-10 col-xs-12">
-                <h1>A Justiça está mais próxima de si
-                </h1>
+                <h2>A Justiça está mais próxima de si
+                </h2>
                 <div class="big-search GFI">
                     <div class="search-bar">
                         <span id="GoogleSearch">
                             <span class="searchInputContainer" >
-                                <input placeholder="O que procura?" class="NormalTextBox" type="search" maxlength="255" size="20" name="q" >
+                                <input placeholder="Pesquisar" class="NormalTextBox" type="search" maxlength="255" size="20" name="q" >
                             </span>
                         </span>
                         <a id="dnn_ctr1009_HomeSearch_GoogleSearchBox_GoogleSearchButton" class="search" data-bind="click:  GoToSearchResults">
@@ -643,7 +644,7 @@
                 <p>Pesquise a informação, o serviço ou o organismo que necessita</p>
             </div>
             <div class="col-md-4 hidden-sm hidden-xs">
-                <span>Temáticas</span>
+               
                 <a href="#" class="button button-tem">
                     <span>Transparência</span>
                 </a>
@@ -651,13 +652,16 @@
                     <span>Jurisprudência</span>
                 </a>
                 <a href="#" class="button button-tem">
-                    <span>Guias</span>
+                    <span>Biblioteca</span>
                 </a>
                 <a href="#" class="button button-tem">
                     <span>Governo Aberto</span>
                 </a>
-                <a href="#" class="more">
-                   mais temáticas
+                <a href="#" class="button button-tem">
+                    <span>Blogue da Justiça</span>
+                </a>
+                <a href="#" class="button button-tem">
+                    <span>Transformação Digital</span>
                 </a>
             </div>
         </div>
@@ -727,25 +731,61 @@
         </div>
     </div>
     -->
+
+
+
+    <div class="feedback">
+        <div class="container">
+            <div class="help_improve">
+                <p>Encontrou a informação que procurava nesta página?</p>
+                <span class="yes button"><span>Sim</span></span>
+                <span class="no button"><span>Não</span></span>
+            </div>
+        </div>
+        <div class="hidden_feedback">
+            <div class="container">
+                <span class="end"></span>
+                <div class="specify">
+                    <label>Ajude-nos a melhorar</label>
+                    <textarea maxlength="200" name="area1" id="textarea1" maxlength="200" rows="3" placeholder="Diga-nos o que procurava ou como podemos melhorar esta página"></textarea>
+                    <span class="chars"></span>
+                </div>
+                <div class="submited">
+                    <i class="fa fa-check"></i> Obrigado por nos ajudar a melhorar!
+                </div>
+                <div class="submit">
+                    <div class="recaptcha">
+                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                    </div>
+                    <button type="button" class="button button-white g-recaptcha" data-sitekey="" data-callback="onSubmit">
+                        <span>Enviar Informação</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="footer">
         <div class="container">
             <div class="col-md-4 col-sm-6 col-xs-12 linha_apoio">
                 <p>Linha de apoio à Justiça</p>
-                <h5>
+                <div>
                     800 800 800
                     <a href="#" class="ajuda">
                         <i class="fa fa-question-circle" aria-hidden="true"></i>
                     </a>
-                </h5>
+                </div>
             </div>
 
             <div class="col-md-4 col-sm-6  col-xs-12 newsletter">
                 <p>Subscreva a newsletter</p>
-                <input type="text" maxlength="255" placeholder="ex: email@exemplo.pt">
+                <label style="display:none" for="newsletter_input">Indique o seu email para subscrever a newsletter</label>
+                <input type="text" maxlength="255" placeholder="ex: email@exemplo.pt" title="Indique o seu email para subscrever a newsletter">
                 <a>
                     <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
+
 
             <div class="col-md-4 col-sm-12  col-xs-12 social">
                 <p>Nas redes sociais</p>
@@ -777,7 +817,7 @@
                 <a href="">Link de Footer 1</a>
                 <a href="">Link de Footer 2</a>
                 <a href="">Link de Footer 3</a>
-                <a href="">Link de Footer 4</a>
+                <p>© Secretaria Geral do Ministério da Justiça</p>
             </div>
 
             <div class="pt_logo">
@@ -802,4 +842,4 @@
 
 </body>
 
-</html>
+</html>

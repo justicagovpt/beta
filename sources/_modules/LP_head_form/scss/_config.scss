@@ -1,0 +1,71 @@
+.justica-LP_head_form {
+    position: relative;
+    .col-md-9 {
+        margin-top: 50px;
+        &.links {
+            margin-top: 85px;
+            margin-bottom: 70px;
+            @include tablet {
+                margin-top: 28px;
+                margin-bottom: inherit;
+            }
+        }
+    }
+    .links {
+        @include tablet {
+            background-color: $white;
+            padding: 8px;
+        }
+        select {
+            height: 39px;
+            padding-left: 11px;
+            border: 1px solid $gray80;
+            width: 100%;
+            transition: border ease-in-out .3s;
+            &:focus {
+                border: 2px solid transparent;
+            }
+        }
+    }
+    .background {
+        background-color: $orange;
+        margin: 0 15px;
+        min-height: 280px;
+        @include media-between(0px, 986px) {
+            margin: 0;
+        }
+        @include tablet {
+            min-height: inherit;
+        }
+    }
+    h1 {
+        margin: 10px 0;
+        color: $gray80;
+        font-size: 54px;
+        margin-bottom: 70px;
+        @include mobile {
+            margin-bottom: 20px;
+        }
+    }
+    em {
+        font-size: $size13;
+        font-family: $open-regular;
+        color: $white;
+        text-transform: uppercase;
+    }
+    .nav-link {
+        font-family: $open-semibold;
+        display: block;
+        font-size: $size18;
+        color: $gray80;
+        text-decoration: underline;
+        margin: 5px 0;
+        transition: color ease-in-out .2s;
+        &:hover {
+            color: $white;
+        }
+        &.active {
+            color: $white;
+        }
+    }
+}
