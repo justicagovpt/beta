@@ -1,0 +1,73 @@
+﻿.justica-cabecalho_listagens_servicos {
+    .container {
+        background: $white;
+        position: relative;
+    }
+    .row {
+        padding: 25px 15px 0 0px;
+        margin-top: 0;
+        margin-bottom: 28px;
+        @include mobile {
+            padding: inherit;
+        }
+    }
+    //SEARCH
+    a {
+        display: inline-block;
+        font-family: $open-bold;
+        font-size: $size24;
+        color: $azul_main;
+        line-height: 35px;
+        text-align: right;
+        margin: 0 7px;
+        transition: color ease-in-out .2s;
+        @include mobile {
+            font-size: 16px;
+        }
+        &:hover {
+            color: $azul_main_dark;
+        }
+    }
+    a.icon {
+        text-align: right;
+        //float: right;
+    }
+    select {
+        &.filter {
+            height: 40px;
+            padding-left: 11px;
+            border: 1px solid $gray30;
+            width: 100%;
+            cursor: pointer;
+            transition: border ease-in-out .3s;
+            &:focus {
+                border: 1px solid $gray80;
+            }
+        }
+
+    }
+    .search-bar {
+        input {
+            border-radius: 15px;
+            padding-left: 8px;
+            height: 40px;
+            border: 1px solid $gray30;
+            width: 100%;
+            cursor: pointer;
+            transition: border ease-in-out .3s;
+            &:focus {
+                border: 1px solid $gray80;
+            }
+        }
+        .search.icon {
+            position: absolute;
+            right: 20px;
+            top: 3px;
+        }
+    }
+    .line {
+        width: 100%;
+        border-bottom: 1px solid $gray5;
+        display: block;
+    }
+}

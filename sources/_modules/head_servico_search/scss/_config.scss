@@ -1,0 +1,215 @@
+﻿.justica-head_servico_search {
+    position: relative;
+
+    &.amarelo {
+        .background {
+            background-color: $orange;
+            min-height: 430px;
+        }
+
+        em {
+            color: $white;
+        }
+
+        .links {
+            a {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .content_container {
+
+        .inner_head_content {
+            margin-top: 30px;
+
+            em {
+                font-size: $size13;
+                font-family: $open-regular;
+                text-transform: uppercase;
+                font-style: normal;
+            }
+
+            h1 {
+                color: $black;
+                margin-top: 8px;
+            }
+
+            p {
+                opacity: 1;
+                padding: 0;
+                color: $gray80;
+                font-size: $size22;
+                line-height: $size26;
+                margin-top: 18px;
+                font-family: $open-semibold;
+            }
+        }
+
+        .container_button {
+
+            p {
+                font-size: $size16;
+                font-family: $open-regular;
+                color: $white;
+                display: inline-block !important;
+                padding: 20px 20px 25px 0px;
+                opacity: 1;
+                margin-bottom: 0px;
+
+                @include media-between(0px, 769px) {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        ._info {
+            p {
+                display: inline-block;
+                color: $black;
+                font-size: $size16;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    p {
+        display: inline-block;
+        color: $gray70;
+        font-size: $size14;
+        margin-top: 2px;
+    }
+
+    h3 {
+        margin-bottom: 15px;
+    }
+
+    .search-bar {
+        display: flex;
+        margin-top: 30px;
+        border-bottom: 1px solid $black;
+
+        & > span {
+            width: 100%;
+        }
+
+        select{
+            background-color:$orange;
+            border:none;
+            option{
+                border:0px;
+                outline:0px;
+            }
+        }
+
+        .searchInputContainer {
+            margin-bottom: 0;
+            position: relative;
+            width: 100%;
+
+            span {
+                width: 100%;
+            }
+            /*&:before {
+                content: '';
+                display: block;
+                width: 0;
+                height: 3px;
+                background-color: $azul_main;
+                position: absolute;
+                bottom: 0px;
+                z-index: 2;
+                transition: all ease-in-out .3s;
+            }*/
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                /*height: 14px;*/
+                /*background-color: $white;*/
+                transition: width ease-in-out .3s;
+                /*border-bottom: 1px solid $black;*/
+                /*border-right: 1px solid $white;
+                border-left: 1px solid $white;*/
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            &.focus {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .SkinObject {
+            float: right;
+            opacity: 0;
+            display: inline-block;
+            user-select: none;
+            margin-bottom: -12px;
+            z-index: 0;
+            position: relative;
+            right: -2px;
+            top: -32px;
+            transform: translateY(-11px);
+            height: 27px;
+
+            @include mobile {
+                transform: translateY(-4px);
+            }
+        }
+
+        .search {
+            cursor: pointer;
+            padding: 0 8px;
+            display: block;
+            align-self: center;
+            /*margin-left: -50px;*/
+            font-size: $size36;
+            color: $black;
+            z-index: 1;
+            //pointer-events: none;
+            position: relative;
+            transition: color ease-in-out .3s;
+            /*transform: scale(-1,1);*/
+            &:hover {
+                color: $black;
+            }
+
+            @include mobile {
+                margin-left: -41px;
+                font-size: 26px;
+                margin-bottom: -17px;
+            }
+        }
+
+        input {
+            padding: 10px 10px 0px 0px;
+            padding-right: 50px;
+            background: none;
+            border: 0;
+            width: 100%;
+            height: 45px;
+            color: $black;
+            font-size: $size24;
+            font-family: $open-light;
+            margin-bottom: 10px;
+
+            @include mobile {
+                font-size: $size20;
+                /*padding-top: 0;*/
+                padding-bottom: 0;
+                /*line-height: 8px;*/
+                padding-right: 44px;
+            }
+        }
+    }
+}

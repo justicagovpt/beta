@@ -1,12 +1,171 @@
-._justica-LP_head_generic {
+﻿.justica-LP_head_generic {
     position: relative;
+    margin-bottom: 0px !important;
+    //quando não tem texto descritivo
+    &.without_text {
+        .background {
+            background-color: $gray5;
+            margin: 0 15px;
+            min-height: 180px;
+        }
+
+        .row {
+            margin-bottom: 0;
+        }
+    }
+    //quando é amarelo tipo serviço
+    &.amarelo {
+        .background {
+            background-color: $orange;
+        }
+
+        em {
+            color: $white;
+        }
+
+        .links {
+            a {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.servico_img {
+        position: relative;
+        min-height: 320px;
+        overflow: hidden;
+        margin-left:15px;
+        margin-right:15px;
+        padding: 0; 
+
+        @include media-between(0px, 986px) {
+            margin: 0;
+            min-height: 380px;
+        }
+
+        @include mobile {
+            min-height: 410px;
+        }
+
+       
+       .inner_head_content {
+           margin-top:40px;
+           h1,em{
+                    color:$white !important;
+                }
+       .summary {
+                color: $white;
+                font-size: $size18;
+                line-height: $size26;
+                margin-top: 15px;
+                font-style: "Raleway", $open-regular;
+                font-weight: 500;
+                margin-bottom:80px;
+
+                @include mobile {
+                    font-size: $size16;
+                }
+                
+                p {
+                    color: $white !important;
+                    font-size: $size18;
+                    line-height: $size26;
+                    margin-top: 15px;
+                    font-style:"Raleway", $open-regular;
+                font-weight: 500;
+                    margin-bottom:80px;
+
+                    @include mobile {
+                        font-size: $size16;
+                    }
+                }
+            }
+       
+       }
+       .links{
+           a{
+               color:$white !important;
+           }
+       }
+        
+        //fallback when there is no image
+        //Escurecer imagem no IE11
+         *::-ms-backdrop, figure { background-color: $black !important; } /* IE11 */
+        figure {
+            height: 320px;
+            margin: 0 auto;
+            background-color:$gray5;
+            position: relative;
+            
 
 
+
+            @include mobile {
+                min-height: 440px;
+            }
+            > div{
+                height: 100%;
+                filter: brightness(0.7);
+                opacity:0.9;
+            }
+
+            .overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba( $gray80, .6);
+            }
+
+            img {
+                height: auto;
+               width:100%;
+                pointer-events: none;
+                margin: 0 auto;
+                pointer-events: none;
+                filter: brightness(0.7);
+                opacity:0.9;
+                position:absolute;
+                clip:rect(0,2104px,403px,0);
+          
+    
+
+                /*@include laptop {
+					height: 270px;
+					width: auto;    
+				}*/
+                @include tablet {
+                    width: auto;
+                }
+
+                @include mobile {
+                    height: 445px;
+                }
+                /* @include media-between(0px, 360px) {
+                    transform: translateX(-50%);
+                }*/
+            }
+        }
+
+        .content_container {
+            margin-top: -320px;
+            margin-bottom:40px;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .background {
+            margin: 0;
+        }
+    }
 
     .background {
         background-color: $gray5;
         margin: 0 15px;
-        min-height: 250px;
+        min-height: 252px;
 
         @include media-between(0px, 986px) {
             margin: 0;
@@ -21,16 +180,40 @@
         }
     }
 
-    h1 {
-        color: $black;
-        margin: 85px 0;
+    .inner_head_content {
+        margin-top: 40px;
 
-        @include tablet {
-            margin: 85px 0 50px 0;
+        em {
+            font-size: $size13;
+            font-family: $open-regular;
+            text-transform: uppercase;
         }
 
-        @include mobile {
-            margin: 50px 0;
+        h1 {
+            color: $black;
+            margin-top: 8px;
+        }
+
+        .summary {
+            opacity: 1;
+            padding: 0;
+            color: $gray80;
+            font-size: $size18;
+            line-height: $size26;
+            margin-top: 18px;
+            font-family:"Raleway", $open-semibold;
+            font-weight:500;
+
+            p {
+                opacity: 1;
+                padding: 0;
+                color: $gray80;
+                font-size: $size18;
+                line-height: $size26;
+                margin-top: 18px;
+                 font-family:"Raleway", $open-semibold;
+                 font-weight:500;
+            }
         }
     }
 
@@ -44,11 +227,25 @@
         color: $white;
         opacity: .7;
         padding-left: 17px;
+
+        &.tematicas {
+            font-size: $size18;
+            color: $gray80;
+        }
+    }
+
+    .imagem {
+        margin-top: 60px;
+
+        img {
+            max-height: 150px;
+        }
     }
 
     .links {
-        margin-top: 65px;
-        margin-bottom: 80px;
+        background-color: transparent;
+        margin-top: 60px;
+        margin-bottom: 60px;
 
         @include laptop {
             margin-top: 35px;
@@ -56,11 +253,11 @@
 
         @include tablet {
             margin-top: 15px;
-            margin-bottom: 0;
         }
 
         .nav-link {
-            font-family: $open-semibold;
+            font-family:"Raleway", $open-semibold;
+            font-weight:600;
             display: inline-block;
             font-size: $size18;
             color: $gray80;
@@ -82,7 +279,6 @@
         }
 
         @include tablet {
-            background-color: $white;
             padding: 8px;
         }
 
@@ -202,216 +398,11 @@
             color: $gray30;
         }
     }
-}
 
-.justica-LP_head_generic {
-    position: relative;
-
-    .col-md-6 {
-        margin-top: 50px;
-    }
-
-    .links {
-        margin-top: 65px;
+    .row {
         margin-bottom: 80px;
-
-        @include laptop {
-            margin-top: 35px;
-        }
-
-        @include tablet {
-            margin-top: 15px;
-            margin-bottom: 0;
-        }
-
-        .nav-link {
-            font-family: $open-semibold;
-            display: inline-block;
-            font-size: $size18;
-            color: $gray80;
-            text-decoration: underline;
-            margin: 5px 0;
-            transition: color ease-in-out .2s;
-            float: left;
-            clear: both;
-
-            &:hover {
-                text-decoration: none;
-                color: $black;
-            }
-
-            &.active {
-                text-decoration: none;
-                color: $black;
-            }
-        }
-
-        @include tablet {
-            background-color: $white;
-            padding: 8px;
-        }
-
-        select {
-            height: 39px;
-            padding-left: 11px;
-            border: 1px solid $gray80;
-            width: 100%;
-            transition: border ease-in-out .3s;
-
-            &:focus {
-                border: 2px solid transparent;
-            }
-        }
-    }
-
-    .background {
-        background-color: $gray5;
-        margin: 0 15px;
-        min-height: 250px;
-
-        @include media-between(0px, 986px) {
-            margin: 0;
-        }
-
-        @include tablet {
-            min-height: 200px;
-        }
-
-        @include mobile {
-            min-height: auto;
-        }
-    }
-
-    h1 {
-        margin: 10px 0;
-        color: $gray80;
-        margin-bottom: 70px;
-
-        @include mobile {
-            margin-bottom: 20px;
-        }
-    }
-
-    h3 {
-        margin-bottom: 15px;
-    }
-
-    em {
-        font-size: $size13;
-        font-family: $open-regular;
-        color: $black;
-        text-transform: uppercase;
-    }
-
-    p {
-        font-size: $size13;
-        font-family: $open-regular;
-        color: $white;
-        opacity: .7;
-        padding-left: 17px;
-    }
-
-    .search-bar {
-        display: flex;
-
-        & > span {
-            width: 100%;
-        }
-
-        .searchInputContainer {
-            position: relative;
-            width: 100%;
-
-            span {
-                width: 100%;
-            }
-
-            &:before {
-                content: '';
-                display: block;
-                width: 0;
-                height: 3px;
-                background-color: $azul_main;
-                position: absolute;
-                bottom: 0px;
-                z-index: 2;
-                transition: all ease-in-out .3s;
-            }
-
-            &:after {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 3px;
-                background-color: $white;
-                transition: width ease-in-out .3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
-
-            &.focus {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-
-        .SkinObject {
-            float: right;
-            opacity: 0;
-            display: inline-block;
-            user-select: none;
-            margin-bottom: -12px;
-            z-index: 0;
-            position: relative;
-            right: -2px;
-            top: -32px;
-            transform: translateY(-11px);
-        }
-
-        .search {
-            padding: 0 8px;
-            display: block;
-            align-self: center;
-            margin-left: -50px;
-            font-size: $size36;
-            color: $white;
-            z-index: 1;
-            pointer-events: none;
-            position: relative;
-            transition: color ease-in-out .3s;
-
-            &:hover {
-                color: $azul_main;
-            }
-        }
-
-        input {
-            padding: 10px;
-            margin-top: 30px;
-            background: none;
-            border: 0;
-            width: 100%;
-            height: 45px;
-            color: $white;
-            font-size: $size24;
-            font-family: $open-light;
-        }
-    }
-
-    .more {
-        display: table;
-        margin: 6px;
-        color: $white;
-        text-decoration: underline;
-        transition: color ease-in-out .3s;
-
-        &:hover {
-            color: $gray30;
+        @include tablet{
+            margin-bottom:20px;
         }
     }
 }
