@@ -1,0 +1,204 @@
+.justica-autenticacao {
+    .container {
+        background-color: $white;
+
+
+        .box {
+            padding: 35px;
+            min-height: 415px;
+            margin-bottom: 20px;
+            margin-top:55px;
+
+            @include tablet {
+                min-height: 240px;
+            }
+
+            &.black {
+                background-color: $gray80;
+            }
+
+            .box_top {
+                margin-bottom: 10px;
+                min-height: 90px;
+
+                @include tablet {
+                    min-height: 50px;
+                }
+
+                span {
+                    font-family: "Raleway","open-bold",Arial,sans-serif;
+                    font-weight: bold;
+                    font-size: $size24;
+                    color: $white;
+                    line-height: 30px;
+                }
+            }
+
+            .content {
+                &.autenticacao {
+                    min-height: 150px;
+
+                    @include tablet {
+                        min-height: 40px;
+                    }
+
+                    &.mobile {
+                        @include tablet {
+                            display: none;
+                        }
+                    }
+
+
+                    .login {
+
+                        .info {
+                            @include tablet {
+                                display: none;
+                            }
+
+                            p {
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        p {
+                            color: $white;
+                            font-family: "Raleway","open-bold",Arial,sans-serif;
+                            font-size: 14px;
+                            line-height: 22px;
+                            margin-bottom: 0px;
+                        }
+
+                        input {
+                            height: 39px;
+                            width: 100%;
+                            margin: 0 0 10px;
+                            padding-left: 11px;
+                        }
+
+                        .checkText {
+                            display: flex;
+
+
+                            input {
+                                height: 20px;
+                                width: 20px;
+                                margin-top: 10px;
+                            }
+
+                            label {
+                                color: $white;
+                                margin: 9px;
+                                font-family: "Raleway","open-bold",Arial,sans-serif;
+                                font-size: 14px;
+                                line-height: 22px;
+                            }
+
+                            select {
+                                height: 39px;
+                                width: 100%;
+                                margin: 0 0 10px;
+                                padding-left: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .acess {
+                @include media-smaller-than(1068px) {
+                    width: 100%;
+                }
+
+                .buttonExecutaServico {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    font-family: $open-semibold;
+                    font-size: $size20;
+                    height: 70px;
+                    color: $white;
+                    text-align: center;
+                    //margin: 25px 0px;
+                    appearance: none;
+                    background-color: transparent;
+                    border: none;
+                    transition: opacity ease-in-out .3s, color ease-in-out .3s, background-color ease-in-out .3s;
+
+                    &.start {
+                        height: auto;
+                        display: -webkit-box;
+                        padding: 18px 62px 18px 30px;
+                        width: 100%;
+                        box-shadow: 0 5px $green_dark;
+                        background-color: $green;
+                        text-align: left;
+                        color: $white;
+                        text-decoration: none;
+                        transition: background-color ease-in-out .3s;
+                        position: relative;
+                        margin-bottom: 20px;
+                        min-height: 75px;
+
+                        @include media-smaller-than(1180px) {
+                            width: 218px;
+                            font-size: $size18;
+                        }
+
+                        @include tablet {
+                            width: 100%;
+                        }
+
+                        i {
+                            position: absolute;
+                            right: 23px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            transition: transform ease-in-out .3s, color ease-in-out .3s;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            background-color: $green_dark;
+                            opacity: 1;
+                            text-decoration: none;
+                            color: $white;
+                        }
+
+
+
+                        span {
+                            display: block;
+                            margin: 0;
+                            vertical-align: inherit;
+                        }
+                    }
+                }
+            }
+
+            a {
+                color: $white;
+                font-family: "Raleway","open-bold",Arial,sans-serif;
+                margin: 0 0 10px;
+                font-size: 14px;
+                line-height: 22px;
+
+                &#recuperarChave {
+                    float: right;
+                }
+            }
+        }
+
+        .boxoutside {
+            padding: 0px 35px 20px 35px;
+
+            .info {
+                color: $black;
+                font-family: "Raleway","open-bold",Arial,sans-serif;
+                margin: 0 0 10px;
+                font-size: 13px;
+                line-height: 22px;
+            }
+        }
+    }
+}
