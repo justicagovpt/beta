@@ -623,27 +623,96 @@
             <!--STEPS NAVIGATOR-->
             <div class="row">
                 <div class="steps col-sm-12 separator">
-                    <span class="step1 active" href="#">Passo 1</span>
-                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                    <span class="step2" href="#">Passo 2</span>
-                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                    <span class="step3" href="#">Passo 3</span>
-                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                    <span class="step4" href="#">Passo 4</span>
-                    <i class="fa fa-chevron-right completed" aria-hidden="true"></i>
-                    <span class="step5" href="#">Passo 5</span>
-                    <i class="fa fa-chevron-right completed" aria-hidden="true"></i>
-                    <span class="step6" href="#">Passo 6</span>
+                    <div class="step">
+                        <span class="step1 active" href="#">Passo 1</span>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <p>Requerentes</p>
+
+                    </div>
+                    <div class="step">
+                        <span class="step2" href="#">Passo 2</span>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <p>Invenção</p>
+
+                    </div>
+                    <div class="step">
+                        <span class="step3" href="#">Passo 3</span>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <p>Inventor(es)</p>
+
+                    </div>
+                    <div class="step">
+                        <span class="step4" href="#">Passo 4</span>
+                        <i class="fa fa-chevron-right completed" aria-hidden="true"></i>
+                        <p>Dados adicionais</p>
+
+                    </div>
+                    <div class="step">
+                        <span class="step5" href="#">Passo 5</span>
+                        <i class="fa fa-chevron-right completed" aria-hidden="true"></i>
+                        <p>Sumário</p>
+
+                    </div>
+                    <div class="step">
+                        <span class="step6" href="#">Passo 6</span>
+                        <p>Pagamento</p>
+                    </div>
                 </div>
             </div>
 
+
+
+
+
+            <span class="line"></span>
+            <!--STEPS NAVIGATOR-->
+            <div class="row">
+                <div class="steps col-sm-12 separator">
+
+                    <span class="step1 active" href="#">Passo 1</span>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+
+
+
+
+                    <span class="step2" href="#">Passo 2</span>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+
+
+
+
+                    <span class="step3" href="#">Passo 3</span>
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+
+
+
+
+                    <span class="step4" href="#">Passo 4</span>
+                    <i class="fa fa-chevron-right completed" aria-hidden="true"></i>
+
+
+
+
+                    <span class="step5" href="#">Passo 5</span>
+                    <i class="fa fa-chevron-right completed" aria-hidden="true"></i>
+
+
+
+
+                    <span class="step6" href="#">Passo 6</span>
+
+
+                </div>
+            </div>
+
+
             <!--CONTENT EXAMPLES-->
             <div class="row">
-                <div class="col-sm-12 separator">
+                <div class="col-sm-12">
 
                     <!--STEP-->
                     <div class="step">
-                        <p>Paragrafos</p>
+
                         <span class="line"></span>
                         <h1>Título H1</h1>
                         <span class="line"></span>
@@ -655,9 +724,177 @@
                                 <i class="fa fa-question-circle" aria-hidden="true"></i>
                             </span>
                         </h5>
+                        <p>Parágrafos</p>
                         <span class="line"></span>
                         <h3> Título de cada segmento H3</h3>
                         <h6>Texto na mesma linha que o titulo do segmento</h6>
+
+
+                        <!--------------------BLOCO NOME----------------------->
+                        <span class="line"></span>
+                        <div class="form_container horizontal">
+                            <div class="row">
+                                <div class="form_item col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                    <label for="Pessoa_NomesProprios">Nome(s) próprio(s)</label>
+                                    <input data-val="true" data-val-maxlength="Nome(s) próprio(s) excede 170 caracteres" data-val-maxlength-max="170" data-val-required="Nome(s) próprio(s) é obrigatório" id="Pessoa_NomesProprios" name="Pessoa.NomesProprios" type="text" value="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form_item col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                    <label for="Pessoa_Apelidos">Apelido(s)</label>
+                                    <input data-val="true" data-val-maxlength="Apelido(s) excede 170 caracteres" data-val-maxlength-max="170" data-val-required="Apelido(s) é obrigatório" id="Pessoa_Apelidos" name="Pessoa.Apelidos" type="text" value="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--------------------BLOCO MORADA----------------------->
+                        <span class="line"></span>
+                        <div class="form_container horizontal">
+                            <div class="row">
+                                <div class="form_item col-md-12">
+                                    <label class="tituloBloco">Morada</label>
+                                </div>
+                                <div class="form_item col-xs-12 col-sm-4 col-md- col-lg-4">
+                                    <label for="Pessoa_Morada_Pa_s">País</label>
+                                    <select id="Pessoa_Morada_ddlPais">
+                                        <option value="">Portugal</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form_item mb-2 col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                                    <label>Código postal</label>
+                                    <input class="codigoPostal_1" type="text" value="0000" style="width:40%">
+                                    <span>-</span>
+                                    <input class="codigoPostal_2" type="text" value="000" style="width:35%">
+
+                                </div>
+                                <div class="form_item btns_final zipcode col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                    <span class="add" id="btnValidarCodigoPostal" title="Validar Código Postal"><span>Validar Código Postal</span><i class="fa " aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <label for="Pessoa_Morada_ObjMoradaPortuguesa_Localidade_Postal">Localidade Postal</label>
+                                    <input id="Pessoa_Morada_ObjMoradaPortuguesa_txtLocalidadePostal" name="Pessoa.Morada.ObjMoradaPortuguesa.txtLocalidadePostal" type="text" value="">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4">
+                                    <label for="Pessoa_Morada_ObjMoradaPortuguesa_Tipo_de_via">Tipo de via</label>
+                                    <select id="Pessoa_Morada_ObjMoradaPortuguesa_ddlVia" name="Pessoa.Morada.ObjMoradaPortuguesa.ddlVia">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <label for="Pessoa_Morada_ObjMoradaPortuguesa_Morada">Morada</label>
+                                    <input id="Pessoa_Morada_ObjMoradaPortuguesa_txtMorada" name="Pessoa.Morada.ObjMoradaPortuguesa.txtMorada" type="text" value="Rua do prédio">
+                                </div>
+                                <div class="form_item col-xs-12 col-sm-1 col-md-1">
+                                    <label for="Pessoa_Morada_ObjMoradaPortuguesa_Porta">Porta</label>
+                                    <input id="Pessoa_Morada_ObjMoradaPortuguesa_txtPortal" name="Pessoa.Morada.ObjMoradaPortuguesa.txtPortal" type="text" value="1">
+                                </div>
+                                <div class="form_item col-xs-12 col-sm-1 col-md-1">
+                                    <label for="Pessoa_Morada_ObjMoradaPortuguesa_Andar">Andar</label>
+                                    <input id="Pessoa_Morada_ObjMoradaPortuguesa_txtAndar" name="Pessoa.Morada.ObjMoradaPortuguesa.txtAndar" type="text" value="1">
+                                </div>
+                                <div class="form_item col-xs-12 col-sm-1 col-md-2">
+                                    <label for="Pessoa_Morada_ObjMoradaPortuguesa_Lado">Lado</label>
+                                    <input id="Pessoa_Morada_ObjMoradaPortuguesa_txtLado" name="Pessoa.Morada.ObjMoradaPortuguesa.txtLado" type="text" value="Esquerdo">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4">
+                                    <label for="Pessoa_Morada_ObjMoradaPortuguesa_Localidade">Localidade</label>
+                                    <input id="Pessoa_Morada_ObjMoradaPortuguesa_txtLocalidade" name="Pessoa.Morada.ObjMoradaPortuguesa.txtLocalidade" type="text" value="Benfica">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4">
+                                    <label for="Pessoa_Morada_ObjMoradaPortuguesa_Distrito">Distrito</label>
+                                    <select id="Pessoa_Morada_ObjMoradaPortuguesa_ddlDistrito" name="Pessoa.Morada.ObjMoradaPortuguesa.ddlDistrito">
+                                        <option value="">Lisboa</option>
+                                    </select>
+                                </div>
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4">
+                                    <label for="Pessoa_Morada_ObjMoradaPortuguesa_Concelho">Concelho</label>
+                                    <select id="Pessoa_Morada_ObjMoradaPortuguesa_ddlConcelho" name="Pessoa.Morada.ObjMoradaPortuguesa.ddlConcelho">
+                                        <option value="">Lisboa</option>
+                                    </select>
+                                </div>
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4">
+                                    <label for="Pessoa_Morada_ObjMoradaPortuguesa_Freguesia">Freguesia</label>
+                                    <select id="Pessoa_Morada_ObjMoradaPortuguesa_ddlFreguesia" name="Pessoa.Morada.ObjMoradaPortuguesa.ddlFreguesia">
+                                        <option value="">Benfica</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!--------------------BLOCO DOCUMENTO----------------------->
+                        <span class="line"></span>
+                        <div class="form_container horizontal">
+                            <div class="row">
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <label for="Pessoa_DocumentoIdentificacao_PaisEmissao">País de emissão</label>
+                                    <select data-val="true" data-val-required="País de emissão é obrigatório" id="Pessoa_DocumentoIdentificacao_PaisEmissao" name="Pessoa.DocumentoIdentificacao.PaisEmissao"></select>
+                                </div>
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <label for="Pessoa_DocumentoIdentificacao_TipoDocumento">Tipo de documento</label>
+                                    <select data-val="true" data-val-required="Tipo de documento é obrigatório" id="Pessoa_DocumentoIdentificacao_TipoDocumento" name="Pessoa.DocumentoIdentificacao.TipoDocumento"></select>
+                                </div>
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <label for="Pessoa_DocumentoIdentificacao_NumeroIdentificacao">Número de identificação</label>
+                                    <input data-val="true" data-val-maxlength="Número de identificação excede 50 caracteres" data-val-maxlength-max="50" data-val-required="Número de identificação é obrigatório" id="Pessoa_DocumentoIdentificacao_NumeroIdentificacao" name="Pessoa.DocumentoIdentificacao.NumeroIdentificacao" type="text" value="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form_item col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <label for="Pessoa_DocumentoIdentificacao_DataDocumento">Data de validade</label>
+                                    <input data-val="true" data-val-date="The field Data de validade must be a date." id="Pessoa_DocumentoIdentificacao_DataDocumento" name="Pessoa.DocumentoIdentificacao.DataDocumento" type="date" value="">
+                                </div>
+                                <div class="form_item checkcenter col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <input id="Pessoa_DocumentoIdentificacao_Vitalicio" name="Pessoa_DocumentoIdentificacao_Vitalicio" type="checkbox">
+                                    <div class="text_check">
+                                        <label for="Pessoa.DocumentoIdentificacao.Vitalicio" class="checkbox linhaUnica">Documento vitalício</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!--------------------BLOCO CHECK----------------------->
+                        <span class="line"></span>
+                        <div class="form_container horizontal">
+                            <div class="row">
+                                <div class="form_item margemTopoReduzida col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <input class="alinharVerticalmente" id="RepresentaEntidadeSujeita" name="RepresentaEntidadeSujeita" type="checkbox">
+                                    <div class="text_check">
+                                        <label for="RepresentaEntidadeSujeita" class="checkbox">Usar os dados para toda a correspondência</label>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
                         <span class="line"></span>
                         <div class="form_container horizontal row">
                             <div class="form_item col-md-4">
@@ -770,32 +1007,32 @@
                             </span>
                         </div>
                     </div>
-                   
-                    
-                        <div class="col-sm-12 bottom separator">
-                            <div class="links">
-                                <h2>Informação útil</h2>
-                                <a href="#" class="nav-link">
-                                    <span>O Beneficiário efetivo</span>
-                                </a>
-                                <a href="#" class="nav-link">
-                                    <span>O que é o beneficiário efetivo</span>
-                                </a>
-                                <a href="#" class="nav-link">
-                                    <span>Como registar o beneficiário efetivo da empresa</span>
-                                </a>
-                                <a href="#" class="nav-link">
-                                    <span>Onde registar o beneficiário efetivo da empresa</span>
-                                </a>
-                                <a href="#" class="nav-link">
-                                    <span>Qual o preço para registar o beneficiário efetivo da empresa</span>
-                                </a>
-                                <a href="#" class="nav-link other">
-                                    <span>outras questões</span>
-                                </a>
-                            </div>
+
+
+                    <div class="col-sm-12 bottom separator">
+                        <div class="links">
+                            <h2>Informação útil</h2>
+                            <a href="#" class="nav-link">
+                                <span>O Beneficiário efetivo</span>
+                            </a>
+                            <a href="#" class="nav-link">
+                                <span>O que é o beneficiário efetivo</span>
+                            </a>
+                            <a href="#" class="nav-link">
+                                <span>Como registar o beneficiário efetivo da empresa</span>
+                            </a>
+                            <a href="#" class="nav-link">
+                                <span>Onde registar o beneficiário efetivo da empresa</span>
+                            </a>
+                            <a href="#" class="nav-link">
+                                <span>Qual o preço para registar o beneficiário efetivo da empresa</span>
+                            </a>
+                            <a href="#" class="nav-link other">
+                                <span>outras questões</span>
+                            </a>
                         </div>
-                  
+                    </div>
+
 
                     <!--Butão prev-->
                     <button class="buttonExecutaServico prevstep" href="#">

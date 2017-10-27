@@ -1,9 +1,13 @@
 # Justica.gov.pt
 
+## Guia de estilos
+[Ficheiro com guia de estilos](https://github.com/justicagovpt/beta/blob/master/Documentos/guiaestilos.pdf)
 
-# # Exemplos de páginas
+## Exemplos de páginas
 
 [Cabeçalho e rodapé](http://htmlpreview.github.io/?https://github.com/justicagovpt/beta/blob/master/_preview/templates/head_footer.html)
+
+[Autenticação](http://htmlpreview.github.io/?https://github.com/justicagovpt/beta/blob/master/_preview/templates/Autenticacao.html)
 
 [Formulário](http://htmlpreview.github.io/?https://github.com/justicagovpt/beta/blob/master/_preview/templates/global_form.html)
 

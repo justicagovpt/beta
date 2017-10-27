@@ -43,6 +43,23 @@ body {
                 @include mobile {
                     display: none;
                 }
+                .step{
+                    display:inline-block;
+                }
+
+                p {
+                    font-size: 12px;
+                    display:block;
+                    color: #333333;
+                    opacity: .5;
+                    margin: 0 14px;
+                    vertical-align: bottom;
+                    margin-bottom:2px;
+
+                    &:first-of-type {
+                        margin-top: 0px;
+                    }
+                }
             }
         }
     }
@@ -419,6 +436,32 @@ body {
 
             @include mobile {
                 padding-bottom: 32px;
+            }
+            .tituloBloco{
+                font-family:$open-bold;
+                font-size:$size22;
+                font-weight:bold;
+            }
+
+            &.checkcenter {
+
+                .text_check {
+                    margin-top: 23px;
+                }
+            }
+
+            .text_check {
+                display: inline-block;
+                margin-left: 14px;
+            }
+
+            &.zipcode {
+                margin-top: 54px;
+
+                span {
+                    width: 100%;
+                    font-weight: bold;
+                }
             }
         }
 
