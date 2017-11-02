@@ -25,6 +25,14 @@
 	transform: $transforms;
 }
 
+//---------------------------------------- Placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
 //---------------------------------------- Rotate
 @mixin rotate ($deg) {
 	@include transform(rotate(#{$deg}deg));

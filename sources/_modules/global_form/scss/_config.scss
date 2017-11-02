@@ -43,18 +43,13 @@ body {
                 @include mobile {
                     display: none;
                 }
-                .step{
-                    display:inline-block;
+
+                .step {
+                    display: inline-block;
                 }
 
                 p {
-                    font-size: 12px;
-                    display:block;
-                    color: #333333;
-                    opacity: .5;
-                    margin: 0 14px;
-                    vertical-align: bottom;
-                    margin-bottom:2px;
+
 
                     &:first-of-type {
                         margin-top: 0px;
@@ -286,7 +281,7 @@ body {
     }
     //BTNS GERAIS
     .btns_final {
-        margin-top: 35px;
+        margin-top: 50px;
 
         .add {
             float: left;
@@ -294,12 +289,12 @@ body {
             font-size: $size14;
             font-family: $open-semibold;
             color: $white;
-            line-height: 37px;
+            line-height: 50px;
             display: block;
-            background: $azul_main;
+            background: $gray70;
             width: 219px;
             text-align: center;
-            height: 38px;
+            height: 50px;
             text-shadow: none;
             opacity: 1;
             position: relative;
@@ -341,9 +336,11 @@ body {
         i {
             opacity: .3;
             font-size: $size18;
+            margin-left:15px;
         }
 
         span {
+             font-family:'Raleway',$open-regular;
             display: inline-block;
             font-size: $size18;
             color: $gray80;
@@ -368,6 +365,41 @@ body {
                     width: 153%;
                     bottom: -23px;
                     left: -14px;
+                }
+            }
+        }
+
+        span {
+             font-family:'Raleway',$open-regular;
+            &.activespan {
+                opacity: 1;
+            }
+        }
+
+        p {
+            font-family:'Raleway',$open-regular;
+            font-size: 14px;
+            display: block;
+            color: $gray40;
+            opacity: .5;
+            margin: 0 14px;
+            vertical-align: bottom;
+            padding-bottom: 20px;
+
+            &.active {
+                opacity: 1;
+                position: relative;
+
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    height: 5px;
+                    background-color: $orange;
+                    width: 153%;
+                    bottom: 0px;
+                    left: -40px;
                 }
             }
         }
@@ -437,10 +469,11 @@ body {
             @include mobile {
                 padding-bottom: 32px;
             }
-            .tituloBloco{
-                font-family:$open-bold;
-                font-size:$size22;
-                font-weight:bold;
+
+            .tituloBloco {
+                font-family: $open-bold;
+                font-size: $size22;
+                font-weight: bold;
             }
 
             &.checkcenter {
