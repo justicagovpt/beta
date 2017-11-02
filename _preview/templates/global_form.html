@@ -624,9 +624,9 @@
             <div class="row">
                 <div class="steps col-sm-12 separator">
                     <div class="step">
-                        <span class="step1 active" href="#">Passo 1</span>
+                        <span class="step1 activespan" href="#">Passo 1</span>
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        <p>Requerentes</p>
+                        <p class="active">Requerentes</p>
 
                     </div>
                     <div class="step">
@@ -937,7 +937,7 @@
                                     </span>
                                 </label>
                                 <input class="erro" type="email" name="Endereço eletrónico institucional" placeholder="ex: exemplo@exemplo.pt">
-                                <label class="erro">campo nao devidademte preenchido</label>
+                                <label class="erro">campo não devidamente preenchido</label>
                             </div>
                             <div class="form_item col-md-4">
                                 <label>Campo com data em HTML5</label>
@@ -994,9 +994,10 @@
                     <span class="line"></span>
                     <h3>Final do formulário texto + botões</h3>
                     <div class="form_container horizontal row padding">
-                        <p>O comprovativo foi enviado por email à Entidade, ao Beneficiário Efetivo e ao Declarante.</p>
-                        <p>Caso pretenda uma cópia, por favor imprima ou descarregue o PDF para ficar com o comprovativo</p>
-                        <div class="btns_final">
+                        <div class="col-md-6">
+                            <p>O comprovativo foi enviado por email à Entidade, ao Beneficiário Efetivo e ao Declarante. Caso pretenda uma cópia, por favor imprima ou descarregue o PDF para ficar com o comprovativo.</p>
+                        </div>
+                        <div class="col-md-6 btns_final">
                             <span class="add" title="Add">
                                 Imprimir documento
                                 <i class="fa fa-print" aria-hidden="true"></i>

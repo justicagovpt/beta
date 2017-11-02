@@ -23,28 +23,31 @@
     .content_container {
 
         .inner_head_content {
-            margin-top: 30px;
+            margin-top: 60px;
 
             em {
                 font-size: $size13;
-                font-family: $open-regular;
+                font-family: 'Raleway',$open-regular;
                 text-transform: uppercase;
                 font-style: normal;
+                color: $gray80;
             }
 
             h1 {
-                color: $black;
+                color: $gray80;
                 margin-top: 8px;
+                  font-family:'Raleway', $open-bold;
+                  font-weight:900;
             }
 
             p {
                 opacity: 1;
                 padding: 0;
                 color: $gray80;
-                font-size: $size22;
+                font-size: $size20;
                 line-height: $size26;
                 margin-top: 18px;
-                font-family: $open-semibold;
+                font-family:'Raleway', $open-semibold;
             }
         }
 
@@ -79,10 +82,11 @@
         ._info {
             p {
                 display: inline-block;
-                color: $black;
+                color: $gray80;
                 font-size: $size16;
                 margin-bottom: 30px;
                 padding-left: 17px;
+                font-family:'Raleway',$open-regular;
             }
         }
     }
